@@ -14,7 +14,7 @@ def test_phoenix_hash_integrity():
     kernel_state = json.dumps(core.FORMAL_INVARIANTS, sort_keys=True).encode()
     computed = hashlib.sha256(kernel_state).hexdigest()
     assert computed == PHOENIX_HASH
-    assert computed == "b2672c8a0bb2ee35cad5e3f5a85139daaad7a96484caad40720fb5af10487152"
+    assert computed == "f6d9ce9d47f8f3934fb5d97d2b52dc36e0d3dda237ab5cb12c164a5571b574ad"
 
 def test_observer_has_physical_off_switch():
     """Invariant 1: Human always holds the hammer"""

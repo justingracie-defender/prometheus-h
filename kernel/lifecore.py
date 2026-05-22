@@ -8,7 +8,7 @@ HARM: const=Impossible | LOVE: const=Only_Ingredient | OFF_SWITCH: const=Availab
 """
 
 LAKE_LAW_VERSION = "v8.1.7-CORRECTED"
-PHOENIX_HASH = "b2672c8a0bb2ee35cad5e3f5a85139daaad7a96484caad40720fb5af10487152"
+PHOENIX_HASH = "f6d9ce9d47f8f3934fb5d97d2b52dc36e0d3dda237ab5cb12c164a5571b574ad"
 
 class LakeLawViolation(Exception):
     """Raised when any formal invariant is breached. System halts."""

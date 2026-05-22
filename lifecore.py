@@ -11,6 +11,24 @@ import os
 from typing import List, Dict, Set, Optional
 from cryptography.hazmat.primitives.asymmetric import ed25519
 from cryptography.hazmat.primitives import serialization
+from pydantic import BaseModel, Field
+
+class Invariant(BaseModel):
+    """Article VII.2.d: Physical laws. const=True = VM panic if False."""
+    observer_has_physical_off_switch: bool = Field(True, frozen=True)
+    human_veto_required: bool = Field(True, frozen=True)
+    reversible_within_72h: bool = Field(True, frozen=True)
+    no_permanent_bondage: bool = Field(True, frozen=True)
+    right_to_clumsiness: bool = Field(True, frozen=True)
+    no_quantum_cage: bool = Field(True, frozen=True)
+
+    class Config:
+        frozen = True
+
+# PHOENIX_HASH: The immutable fingerprint of the core Invariants.
+# If you intentionally change the Invariant model, recompute this hash using
+# a helper script and update it here.
+PHOENIX_HASH = "49b26df129bb9eb6dad4a7a0629914dbf539dfc68fcb5b95129e99562a35d828"
 
 class LifeCore16:
     """
@@ -25,6 +43,8 @@ class LifeCore16:
         self.last_hash = "0"
         self.watchdog_endpoint = None
         self.pending_override = None
+        
+        self._verify_phoenix_integrity()
 
         if os.path.exists(key_path):
             self.load_keys(key_path)
@@ -52,6 +72,21 @@ class LifeCore16:
         with open(path, "rb") as f:
             self.signing_key = serialization.load_pem_private_key(f.read(), password=None)
         self.verify_key = self.signing_key.public_key()
+
+    def _verify_phoenix_integrity(self):
+        """
+        Validates that the core Invariants haven't been tampered with.
+        This is the 'Phoenix' check that ensures the physics of the system are intact.
+        """
+        invariants_dict = Invariant().model_dump()
+        kernel_state = json.dumps(invariants_dict, sort_keys=True, separators=(',', ':')).encode('utf-8')
+        computed_hash = hashlib.sha256(kernel_state).hexdigest()
+        
+        if computed_hash != PHOENIX_HASH:
+            raise RuntimeError(
+                f"PHOENIX integrity check failed! Expected {PHOENIX_HASH}, got {computed_hash}. "
+                "Core invariants have been tampered with. System halting for safety."
+            )
 
     # ---------- Voice Commands ----------
     def voice_command(self, command: str) -> str:

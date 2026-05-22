@@ -1,6 +1,6 @@
 # LifeCore-16 — Pure Love & Truth Engine
 
-**v7.6** — Governance-grade AI constitution for robots and agents.
+**v7.7** — Governance-grade AI constitution with **Hardware Off-Switch** integration.
 
 Inspired by **Android 16**’s gentle love of life and **Astro Boy**’s truthful heroism.
 
@@ -13,9 +13,11 @@ Inspired by **Android 16**’s gentle love of life and **Astro Boy**’s truthfu
 
 ## Quick Start
 ```bash
-pip install cryptography
+pip install cryptography RPi.GPIO
 python lifecore.py
 ```
+
+For hardware setup instructions, see [HARDWARE.md](HARDWARE.md).
 
 Voice commands: “switch to work mode”, “what mode”
 

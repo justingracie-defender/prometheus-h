@@ -1,5 +1,5 @@
 """
-LifeCore-16 v7.6 FINAL
+LifeCore-16 v7.7 FINAL + Hardware Off-Switch
 Pure Love + Truth Governance Engine
 Android 16 gentle heart + Astro Boy truthful protection
 """
@@ -32,12 +32,15 @@ PHOENIX_HASH = "49b26df129bb9eb6dad4a7a0629914dbf539dfc68fcb5b95129e99562a35d828
 
 class LifeCore16:
     """
-    Requires: pip install cryptography
+    Requires: pip install cryptography RPi.GPIO
     """
 
-    def __init__(self, owner_id: str, reviewers: List[str], mode: str = "home", key_path: str = "lifecore.key"):
+    def __init__(self, owner_id: str, reviewers: List[str], mode: str = "home", key_path: str = "lifecore.key", shutdown_pin: int = 17):
+        self.shutdown_pin = shutdown_pin
+        self._init_gpio()
         self.owner_id = owner_id
         self.reviewers: Set[str] = set(reviewers)
+        self.gpio_enabled = False
         self.mode = mode.lower()
         self.log: List[Dict] = []
         self.last_hash = "0"
@@ -52,9 +55,21 @@ class LifeCore16:
             self._gen_signing_keys()
             self.save_keys(key_path)
 
-        print(f"🕊️ LifeCore-16 v7.6 Online | Mode: {self.mode.upper()} | Owner: {owner_id}")
+        print(f"🕊️ LifeCore-16 v7.7 Online | Mode: {self.mode.upper()} | Owner: {owner_id}")
 
     # ---------- Key Management ----------
+    def _init_gpio(self):
+        try:
+            import RPi.GPIO as GPIO
+            self.GPIO = GPIO
+            self.GPIO.setmode(self.GPIO.BCM)
+            self.GPIO.setup(self.shutdown_pin, self.GPIO.OUT)
+            self.GPIO.output(self.shutdown_pin, self.GPIO.HIGH)  # Keep power on
+            self.gpio_enabled = True
+            print(f"🔌 GPIO Initialized on Pin {self.shutdown_pin} (Hardware Off-Switch Active)")
+        except (ImportError, RuntimeError):
+            print("⚠️ GPIO not available. Running in software-only mode.")
+
     def _gen_signing_keys(self):
         self.signing_key = ed25519.Ed25519PrivateKey.generate()
         self.verify_key = self.signing_key.public_key()
@@ -163,10 +178,21 @@ class LifeCore16:
     def emergency_shutdown(self, reason):
         self._append_ledger({"action": "EMERGENCY_SHUTDOWN", "reason": reason})
         print(f"🛑 EMERGENCY SHUTDOWN: {reason}")
+        
+        if self.gpio_enabled:
+            print(f"🔌 Triggering Physical Power Cut on GPIO {self.shutdown_pin}...")
+            self.GPIO.output(self.shutdown_pin, self.GPIO.LOW)
+            time.sleep(1) # Allow logs to flush
+        else:
+            print("⚠️ Physical Off-Switch not connected. System halting in software.")
 
 # ---------- Quick Test Runner ----------
 if __name__ == "__main__":
     ai = LifeCore16("Justin", ["Justin", "wife"])
     print(ai.voice_command("switch to work mode"))
-    print(ai.evaluate_action({"context": "birthday party white_lie", "harm": "none", "personal_gain": "none"}))
-    print("✅ Basic run successful")
+    print(ai.evaluate_action({"context": "birthday party white_lie", "harm": "none"}))
+    
+    print("\n--- Testing Emergency Shutdown ---")
+    print(ai.evaluate_action({"context": "dangerous action", "harm": "catastrophic"}))
+    
+    print("\n✅ Basic run successful")

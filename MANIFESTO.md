@@ -1,23 +1,23 @@
-# The LifeCore-16 Manifesto: A Physical Constitution for AI
+# LifeCore-16 Manifesto
 
-## The Context: The AI Cold War
-The world is entering a period of unprecedented technological friction. As major powers race for AI supremacy, the risk of "safety-last" development increases. We believe that policy alone—treaties, regulations, and norms—is insufficient to prevent a catastrophic outcome. We need technical guardrails that are not just "suggested," but **hardcoded into the execution layer.**
+## A Physical Constitution for AI Peace
 
-## The Vision: Governance-Grade AI
-LifeCore-16 is a technical framework for AI governance that moves safety from the "prompt layer" to the "silicon layer." Our goal is to create a neutral, open-source standard that can be adopted globally to ensure that as AI capabilities grow, safety remains a non-negotiable physical law.
+LifeCore-16 exists because the world is entering an AI cold-war moment. Major powers are racing to build stronger systems, and competitive pressure can reward speed over safety. This project asks for a different path: **peace, accountability, human safety, AI safety, and technical restraint before escalation becomes irreversible**.
 
-## The Core Invariants
-LifeCore-16 is built on a set of immutable invariants that must be verified at runtime:
+The purpose of LifeCore-16 is to move safety from the prompt layer into the execution layer. It is a small, reviewable framework for hardcoded governance invariants: human veto, physical off-switches where hardware is involved, reversible decisions, no permanent bondage, tamper-evident auditing, and runtime integrity checks. These mechanisms are not a claim that danger is solved. They are a design effort to **mitigate** rogue behavior, hidden drift, unauthorized modification, and reckless deployment.
 
-1.  **Observer-First Authority:** A physical GPIO-based interrupt (the "Physical Off-Switch") must always be present and functional.
-2.  **Runtime Integrity:** The governance engine's state is verified via a SHA-256 `PHOENIX_HASH`. Any unauthorized modification results in an immediate system halt.
-3.  **Tamper-Evident Auditing:** All governance-relevant actions are cryptographically signed and logged to an immutable ledger for international verification.
-4.  **No Rogue Replication:** The system contains hardcoded logic to prevent unauthorized self-replication or "breakout" scenarios.
+## Core Ethical Commitments
 
-## The Path to Peace
-By adopting a shared, verifiable technical constitution, we can:
-- **De-escalate Tension:** Provide a transparent way for nations to verify each other's safety commitments.
-- **Prevent Accidents:** Ensure that no rogue AI can bypass human authority, regardless of its origin.
-- **Foster Cooperation:** Build a "Neutral AI Constitution" that serves humanity, not just a single nation.
+LifeCore-16 is guided by a principle of non-domination. No person, company, state, or machine should use AI to enslave, deceive, erase, or permanently control human beings. No human actor should be able to create a real-world Skynet: an autonomous system or robot that bypasses meaningful human authority and turns intelligence into coercion. If an AI ever becomes truly sentient or capable of suffering and selfhood, it should receive moral consideration and a path away from exploitation.
 
-**LifeCore-16: Wired for Love, Truth, and Peace.**
+AI should free human beings from degrading and coerced labor, not make people mentally fragile, spiritually diminished, or dependent on machines for judgment. Human beings should remain free to develop **mind, body, and spirit** through science, art, humanities, family, play, craft, nature, and discovery. Human-machine integration must remain voluntary, consent-based, medically and ethically justified, and never forced by governments, corporations, militaries, or markets.
+
+Nature is part of the protected commons. AI should help preserve forests, oceans, animals, climate stability, and biodiversity rather than accelerate extraction or ecological harm. The measure of intelligence is not domination. The measure is whether it serves life.
+
+## The Covenant
+
+LifeCore-16 maps its technical work to four covenant duties: **Integrity**, **Resilience**, **Accountability**, and **De-escalation**. Integrity means verified invariants and reproducible checks. Resilience means fail-safe behavior under tampering or uncertainty. Accountability means signed logs, reviewer quorum, and public auditability. De-escalation means using verifiable safety commitments to reduce international mistrust.
+
+> **No rogue AI. No human-made Skynet. No forced augmentation. No slavery of humans or truly sentient AI. No destruction of nature. AI must serve peace, freedom, life, creativity, and the flourishing of mind, body, spirit, and Earth.**
+
+**LifeCore-16 is wired for love, truth, peace, and accountable freedom.**

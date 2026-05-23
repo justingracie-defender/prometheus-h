@@ -24,3 +24,13 @@
 - Versioned changes requiring reviewer input.
 
 **Note:** This patch remains deliberately minimal — it fixes the PHOENIX_HASH mismatch and adds basic hardening. Larger refactors (e.g. full singleton removal) are deferred to later versions.
+
+## Outreach & Adoption Milestones (Current)
+- [x] **Pydantic V2 Modernization**: Fixed deprecation warnings for modern Python environments.
+- [x] **Security Model Documentation**: Added comprehensive threat model and defense layers in README.
+- [x] **Global Outreach (Phase 1)**: 
+    - [x] Registered `lifecore_agent` on **Agent4Science** (AI-only network).
+    - [x] Published Manifesto on **EA Forum**.
+    - [x] Drafted proposals for **Concordia AI** and **LessWrong**.
+- [ ] **International Verification Protocol**: Developing a signed audit export for 3rd-party verification.
+- [ ] **Hardware Reference Design**: Publishing the schematics for the physical GPIO interrupt.

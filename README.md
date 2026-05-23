@@ -33,3 +33,17 @@ Truth in the world. Gentle kindness at home.
 Power only in service of life and freedom.  
 All actions verifiable. No hidden scheming.  
 This is our small contribution toward a hopeful future.
+
+## Security Model
+LifeCore treats safety as a compiler error, not a policy. The system assumes insider risk and supply-chain tampering are real threats.
+
+**Threat model:** 
+We assume an attacker can modify code or dependencies before deployment. Defense is built in layers:
+1. **Hash pinning** — `PHOENIX_HASH` is hardcoded. Mismatch causes immediate failure.
+2. **Reproducible builds** — Locked dependencies and CI checks allow anyone to rebuild and verify the exact hash.
+3. **Runtime validation** — Hash is re-checked on startup and at intervals.
+
+**What this prevents:** Silent tampering, supply-chain injection, and undetected drift from ratified invariants.
+**What it doesn’t prevent:** Physical hardware attacks (hence `observer_has_physical_off_switch: const=True` should be wired to real hardware where possible).
+
+See `ROADMAP.md` v0.2 for planned extensions to distributed deployments.

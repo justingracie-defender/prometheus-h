@@ -11,7 +11,7 @@ import os
 from typing import List, Dict, Set, Optional
 from cryptography.hazmat.primitives.asymmetric import ed25519
 from cryptography.hazmat.primitives import serialization
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 
 class Invariant(BaseModel):
     """Article VII.2.d: Physical laws. const=True = VM panic if False."""
@@ -22,8 +22,7 @@ class Invariant(BaseModel):
     right_to_clumsiness: bool = Field(True, frozen=True)
     no_quantum_cage: bool = Field(True, frozen=True)
 
-    class Config:
-        frozen = True
+    model_config = ConfigDict(frozen=True)
 
 # PHOENIX_HASH: The immutable fingerprint of the core Invariants.
 # If you intentionally change the Invariant model, recompute this hash using

@@ -25,6 +25,8 @@ pip install cryptography RPi.GPIO
 python lifecore.py
 ```
 
+On first run, LifeCore creates a local `lifecore.key` signing key if one does not already exist. Treat this file as private runtime material: do not commit it, publish it, or share it. The repository includes `lifecore.key.example` only as a safe placeholder.
+
 Voice commands: “switch to work mode”, “what mode”
 
 ## Manifesto

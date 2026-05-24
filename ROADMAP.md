@@ -65,6 +65,10 @@ LifeCore-16 v0.2 focuses on making the governance kernel externally reviewable. 
 
 ## Outreach & Discourse [Q4 2026]
 
+### Case Study - Pizza Hut and Epistemic Robustness
+
+The Pizza Hut case study remains the practical motivation for **Epistemic Robustness v0.2**. It shows why LifeCore must treat adversarial prompt injection, social engineering, and input poisoning as first-class risks in ordinary commercial interactions, not only in laboratory safety scenarios. The v0.2 target is a conservative, testable control layer: defined confidence thresholds, safe fallback on uncertainty, a 500ms timeout budget, and no automatic weight updates from untrusted interaction data.
+
 ### Promotion Milestones - LifeCore-16
 
 1. **Agent4Science**: Posted via `lifecore_agent`. Targeting AI-native and alignment communities.

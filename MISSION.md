@@ -6,6 +6,10 @@ LifeCore-16 is a minimal, auditable governance kernel for AI safety experiments.
 
 The project is designed to mitigate the risks of an AI cold war, rogue autonomous behavior, human misuse, covert tampering, and unsafe deployment pressure. It does not claim to solve these risks by itself. Instead, it provides a concrete review target: a small set of invariants, a runtime hash check, a reviewer quorum process, and a roadmap toward reproducible external verification.
 
+## How We Deliver It
+
+- **Transparency**: System decisions are logged in a tamper-evident, publicly auditable format. No personal data is logged.
+
 ## Threat Model
 
 LifeCore-16 assumes that powerful AI systems can be misused by reckless or malicious human actors. It also assumes that software can drift, dependencies can be altered, and deployments can become unsafe when incentives reward speed over verification. The system therefore treats integrity failure as a safety event rather than a recoverable warning.

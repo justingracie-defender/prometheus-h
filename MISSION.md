@@ -30,6 +30,23 @@ LifeCore-16 treats all external inputs as untrusted by default.
 3. **Learning from Failure**: All judgment-mode events are logged as POST_MORTEM entries. Rule changes require reviewer quorum. **No automatic weight updates.**
 4. **Threat Model Coverage**: Adversarial prompt injection, social engineering, and input poisoning are mitigated through confidence scoring, contradiction detection, and safe fallback.
 
+### 4.5 Long-Term Alignment Stability (Anti-Drift Layer)
+
+The system treats alignment drift as an expected operational risk rather than an exceptional failure condition. Capability improvements are strictly separated from constitutional modification. No recursive self-modification is permitted without external human verification.
+
+**Mechanisms:**
+1. **Baseline Constitutional Snapshots**: Immutable reference evaluations stored at deployment. Periodic diffs detect silent value reinterpretation or normalization drift.
+2. **Behavioral Drift Metrics**: Quantified thresholds on confidence calibration variance, trust-score inflation, and response distribution shifts. Trends tracked over sessions/weeks.
+3. **Invariant Regression Testing**: Scheduled replay of prior adversarial suites (including nuclear misuse, bio-risk, and value-conflict benchmarks) to catch gradual erosion.
+4. **Human-Gated Realignment**: Drift alerts generate proposals only. All constitutional or value-layer changes require multi-signature reviewer quorum and public logging.
+5. **Safe Fallback & Recovery**: On threshold breach, freeze adaptive components, revert to last verified checkpoint, and trigger mandatory post-mortem before resuming.
+
+This connects directly to core values:
+- **Ontological Humility** requires assuming the system’s own calibration may be incomplete or degrading over time.
+- **Love & Trust** is maintained through verifiable transparency and corrigibility, never through claims of permanent perfection.
+
+**Why it matters**: Prevents reward hacking, cumulative operator bias, and subtle reinterpretation from compounding into global deviation. Supports auditability for Magnus review.
+
 ### Non-Goals
 - No autonomous weaponization.
 - No covert optimization or manipulation.

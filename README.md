@@ -12,6 +12,7 @@ Inspired by **Android 16**’s gentle love of life and **Astro Boy**’s truthfu
 - No permanent bondage, no rogue replication
 - Tamper-evident logs + signed public export
 - Reviewer quorum for overrides
+- 10. Ontological Humility - Design for unknowns, avoid false certainty.
 
 ## 🚀 Join the Movement
 1. **Explore the Manifesto:** Read our vision in the [Manifesto](#manifesto).

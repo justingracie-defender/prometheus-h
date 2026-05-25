@@ -13,8 +13,8 @@
 7. **Privacy** – Minimize data collection. Never store more than needed.
 8. **Freedom** – No lock-in, no covert control. Users can audit and exit anytime.
 9. **Respect for Nature** – Design for low energy use and minimal environmental impact.
-10. **Epistemic & Ontological Humility**: Acknowledge uncertainty in models of physics, cognition, and reality. Avoid overconfidence in system capabilities. Design safety and cooperation invariants that hold under unknown or unmodeled conditions.
-    - Failure Mode: Overconfidence in incomplete models leads to unsafe assumptions and brittle cooperation.
+10. **Ontological Humility**: Recognize the limits of current models of physics, consciousness, and reality. Avoid premature certainty. Design systems that remain safe and cooperative even if unknown domains exist.
+    - Failure Mode: False certainty under unknown conditions leads to brittle assumptions and unsafe action.
 
 ### How We Deliver It
 - **Simple Rules**: Fewer, clearer invariants. If you can’t explain it in one sentence, it’s too complex.

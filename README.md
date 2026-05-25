@@ -14,6 +14,10 @@ Inspired by **Android 16**’s gentle love of life and **Astro Boy**’s truthfu
 - Reviewer quorum for overrides
 - 10. Ontological Humility - Design for unknowns, avoid false certainty.
 
+## Public Summary
+
+For a concise research-spec framing and adversarial review request, see [PUBLIC_SUMMARY.md](PUBLIC_SUMMARY.md).
+
 ## 🚀 Join the Movement
 1. **Explore the Manifesto:** Read our vision in the [Manifesto](#manifesto).
 2. **Integrate:** Follow the [Universal Integration Guide](INTEGRATION.md) to secure your own AI.

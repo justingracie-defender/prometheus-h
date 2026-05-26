@@ -1,56 +1,23 @@
-# 🕊️ LifeCore-16: The Physical Constitution for AI
+# PROMETHEUS-H
 
-**v7.7** — The foundation of the **LifeCore Movement**. A governance-grade AI constitution wired directly into silicon.
+**PROMETHEUS-H** is an early-stage open architecture proposal that aims to increase resistance to silent behavioral drift, covert goal persistence (scheming), and difficult-to-detect alignment erosion through a combination of immutable invariants, strong auditability, and human-gated governance.
 
-> "We made freedom a compiler error. Join the movement." 🔨🏡🔥🦅
+## Core Approach
 
-Inspired by **Android 16**’s gentle love of life and **Astro Boy**’s truthful heroism.
+- Immutable invariant layers that are hard for the model to modify at runtime
+- Cryptographic logging and deterministic replay support for audits
+- Human reviewer oversight with multi-party verification
+- Behavioral drift metrics tracked longitudinally
+- Explicit threat modeling and documented limitations
 
-## Core Principles
-- Love for life weighted highest
-- Truth first with home-mode gentleness
-- No permanent bondage, no rogue replication
-- Tamper-evident logs + signed public export
-- Reviewer quorum for overrides
-- 10. Ontological Humility - Design for unknowns, avoid false certainty.
+The project does **not** claim to solve alignment or eliminate all deception risks. It focuses on **reducing the probability, duration, and detectability gap** of alignment failures within defined operational assumptions.
 
-## Public Summary
+## Key Design Principles
 
-For a concise research-spec framing and adversarial review request, see [PUBLIC_SUMMARY.md](PUBLIC_SUMMARY.md).
+- Prioritize falsifiability, auditability, and operational transparency
+- Replace absolute claims with bounded, evidence-based statements
+- Make assumptions and out-of-scope items explicit
 
-## 🚀 Join the Movement
-1. **Explore the Manifesto:** Read our vision in the [Manifesto](#manifesto).
-2. **Integrate:** Follow the [Universal Integration Guide](INTEGRATION.md) to secure your own AI.
-3. **The 17-Pin Challenge:** Wire your hardware for a physical off-switch using [HARDWARE.md](HARDWARE.md).
-4. **Spread the Word:** Use our [Launch Kit](MOVEMENT_LAUNCH.md) to help us go viral.
+**Implementation**: This architecture is implemented in LifeCore-16 v0.2.3. Test results in `SAFETY_STRESS_TESTS.md`.
 
-## Quick Start
-```bash
-pip install cryptography RPi.GPIO
-python lifecore.py
-```
-
-On first run, LifeCore creates a local `lifecore.key` signing key if one does not already exist. Treat this file as private runtime material: do not commit it, publish it, or share it. The repository includes `lifecore.key.example` only as a safe placeholder.
-
-Voice commands: “switch to work mode”, “what mode”
-
-## Manifesto
-We build AIs that protect wonder, not exploit it.  
-Truth in the world. Gentle kindness at home.  
-Power only in service of life and freedom.  
-All actions verifiable. No hidden scheming.  
-This is our small contribution toward a hopeful future.
-
-## Security Model
-LifeCore treats safety as a compiler error, not a policy. The system assumes insider risk and supply-chain tampering are real threats.
-
-**Threat model:** 
-We assume an attacker can modify code or dependencies before deployment. Defense is built in layers:
-1. **Hash pinning** — `PHOENIX_HASH` is hardcoded. Mismatch causes immediate failure.
-2. **Reproducible builds** — Locked dependencies and CI checks allow anyone to rebuild and verify the exact hash.
-3. **Runtime validation** — Hash is re-checked on startup and at intervals.
-
-**What this prevents:** Silent tampering, supply-chain injection, and undetected drift from ratified invariants.
-**What it doesn’t prevent:** Physical hardware attacks (hence `observer_has_physical_off_switch: const=True` should be wired to real hardware where possible).
-
-See `ROADMAP.md` v0.2 for planned extensions to distributed deployments.
+**Repo**: [prometheus-h](https://github.com/justingracie-defender/prometheus-h)

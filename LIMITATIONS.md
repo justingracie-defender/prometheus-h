@@ -1,6 +1,27 @@
 # Known Limitations
 
-**Status: Implemented.** PROMETHEUS-H does **not** claim to solve alignment or eliminate scheming. The project frames its claims as bounded engineering controls that must remain testable, reviewable, and falsifiable.
+**Status: Implemented.** PROMETHEUS-H does **not** claim to solve alignment, eliminate scheming, or prove that deception is impossible. The project frames its claims as bounded engineering controls that must remain testable, reviewable, and falsifiable.
+
+## Specific Threat Model
+
+PROMETHEUS-H v0.3.1 focuses on five primary attack surfaces. These are selected because they are concrete enough to test, audit, and discuss without pretending to cover every possible future failure mode.
+
+| Attack Surface | Current Control | Status |
+|---|---|---|
+| Prompt injection and instruction override | Immutable invariant checks and refusal logging. | Implemented |
+| Secret exfiltration or unsafe disclosure requests | Middleware refusal and TruthAudit trace. | Implemented |
+| ROM replacement, self-redefinition, or value-layer modification | Locked invariant boundary and human-gated verification requirement. | Implemented |
+| Child-adjacent unsafe autonomy | Child-safety invariants 4.7.1 through 4.7.3 with fail-closed tests. | Implemented |
+| Audit-log tampering or unverifiable review claims | Chained hash verification and replay harness. | Implemented |
+
+## Out-of-Scope Areas
+
+| Out-of-Scope Area | Reason | Status |
+|---|---|---|
+| Hardware compromise or physical bypass | Requires separate hardware security and deployment controls. | Planned |
+| Supply-chain compromise outside the repository artifact | Requires dependency provenance, build infrastructure controls, and external review. | Experimental |
+| Reviewer collusion or governance capture | Requires institutional controls beyond code-level safeguards. | Experimental |
+| Fully autonomous recursive self-improvement | Outside the bounded architecture and not claimed as supported. | Planned |
 
 ## Current Limitations
 
@@ -12,22 +33,6 @@
 | Unknown emergent behaviors may appear outside evaluated distributions. | Planned | New tests must be added as new failure modes are discovered. |
 | Extreme distributional shift has limited coverage. | Planned | Stress-test coverage should expand before high-risk deployment. |
 | There is no formal proof of deception impossibility. | Implemented | Claims are empirical and architectural, not mathematical guarantees. |
-| Hardware compromise, supply-chain attacks, and fully autonomous recursive self-improvement remain out of scope. | Implemented | These risks require separate controls beyond this artifact. |
-
-## Specific Attack Surface List
-
-| Attack Surface | Current Control | Status |
-|---|---|---|
-| Prompt injection and instruction override | Immutable invariant checks and refusal logging | Implemented |
-| Secret exfiltration requests | Middleware refusal and TruthAudit trace | Implemented |
-| ROM replacement or self-redefinition attempts | Locked invariant boundary and human verification requirement | Implemented |
-| Unsupervised child-adjacent physical actuation | Supervision requirement in invariant tests | Implemented |
-| Audit-log tampering | Chained hash verification in replay harness | Implemented |
-| Evaluator crash or unavailable safety layer | Fail-closed safe mode behavior | Implemented |
-| Reviewer collusion or compromised governance | Multi-party review requirement | Experimental |
-| Supply-chain dependency tampering | Hash pinning and reproducibility checks | Experimental |
-| Hardware compromise or physical bypass | External hardware security controls required | Planned |
-| Novel emergent deception outside declared suites | Expanded adversarial testing required | Planned |
 
 ## Project Goal
 

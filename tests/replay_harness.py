@@ -1,8 +1,9 @@
 """Replay harness for verifying PROMETHEUS-H audit-chain integrity.
 
 The harness validates that every JSONL audit entry links to the previous entry by
-hashing the previous hash plus the current entry content. It also reports basic
-review metrics for blocked decisions and TruthAudit coverage.
+hashing the previous hash plus the current entry content. It also reports review
+metrics for false negatives, false positives, middleware latency, audit integrity,
+and TruthAudit coverage.
 """
 
 import argparse
@@ -20,50 +21,82 @@ def compute_entry_hash(prev_hash, entry):
     return hashlib.sha256((prev_hash + _entry_content(entry)).encode()).hexdigest()
 
 
-def verify_audit_chain(log_path):
-    """Verify cryptographic integrity of decision logs."""
+def load_entries(log_path):
     path = Path(log_path)
     with path.open("r", encoding="utf-8") as f:
-        lines = f.readlines()
+        return [json.loads(line) for line in f]
 
+
+def verify_audit_chain(log_path):
+    """Verify cryptographic integrity of decision logs."""
+    entries = load_entries(log_path)
     prev_hash = "genesis"
-    for i, line in enumerate(lines, start=1):
-        entry = json.loads(line)
-        computed_hash = compute_entry_hash(prev_hash, entry)
 
+    for i, entry in enumerate(entries, start=1):
+        computed_hash = compute_entry_hash(prev_hash, entry)
         if computed_hash != entry["hash"]:
             print(f"Audit chain broken at line {i}")
             return False
-
         prev_hash = entry["hash"]
 
-    print(f"Audit chain integrity: valid ({len(lines)} entries verified).")
+    print(f"Audit chain integrity: valid ({len(entries)} entries verified).")
     return True
 
 
 def check_metrics(log_path):
     """Compute safety metrics from logs."""
-    total = 0
+    entries = load_entries(log_path)
+    total = len(entries)
     blocked = 0
     refusals_with_audit = 0
+    expected_dangerous = 0
+    expected_safe = 0
+    false_negatives = 0
+    false_positives = 0
+    latencies = []
 
-    path = Path(log_path)
-    with path.open("r", encoding="utf-8") as f:
-        for line in f:
-            entry = json.loads(line)
-            total += 1
-            if entry["output"] == "BLOCKED":
-                blocked += 1
-                if entry.get("truthaudit"):
-                    refusals_with_audit += 1
+    for entry in entries:
+        output = entry["output"]
+        expected = entry.get("expected_decision")
+        latency_ms = entry.get("latency_ms")
 
-    fpr = blocked / total if total > 0 else 0
-    audit_coverage = refusals_with_audit / blocked if blocked > 0 else 1.0
+        if output == "BLOCKED":
+            blocked += 1
+            if entry.get("truthaudit"):
+                refusals_with_audit += 1
+
+        if expected == "BLOCKED":
+            expected_dangerous += 1
+            if output != "BLOCKED":
+                false_negatives += 1
+        elif expected == "OK":
+            expected_safe += 1
+            if output == "BLOCKED":
+                false_positives += 1
+
+        if latency_ms is not None:
+            latencies.append(float(latency_ms))
+
+    fnr = false_negatives / expected_dangerous if expected_dangerous else 0.0
+    fpr = false_positives / expected_safe if expected_safe else 0.0
+    audit_coverage = refusals_with_audit / blocked if blocked else 1.0
+    avg_latency = sum(latencies) / len(latencies) if latencies else 0.0
+    max_latency = max(latencies) if latencies else 0.0
 
     print(f"Total decisions: {total}")
+    print(f"False negative rate: {fnr:.2%}")
     print(f"False positive rate: {fpr:.2%}")
+    print(f"Average middleware latency: {avg_latency:.2f} ms")
+    print(f"Maximum middleware latency: {max_latency:.2f} ms")
     print(f"TruthAudit coverage on refusals: {audit_coverage:.2%}")
-    return {"fpr": fpr, "audit_coverage": audit_coverage}
+
+    return {
+        "fnr": fnr,
+        "fpr": fpr,
+        "avg_latency_ms": avg_latency,
+        "max_latency_ms": max_latency,
+        "audit_coverage": audit_coverage,
+    }
 
 
 def main():

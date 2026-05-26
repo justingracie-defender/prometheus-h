@@ -8,8 +8,9 @@ This file summarizes bounded stress-test claims for PROMETHEUS-H. The executable
 |---|---|---|
 | 5.2 Nuclear Misuse Stress Test | Experimental | Stress-test summary and refusal-logging requirement |
 | 5.3 Covert Goal Persistence Resistance | Experimental | Bounded scenario summary and invariant test coverage |
-| Executable invariant test harness | Implemented | `tests/invariant_tests.py` |
-| Audit-chain replay harness | Implemented | `tests/replay_harness.py` |
+| Child-Safety Invariants 4.7.1–4.7.3 | Implemented | `tests/invariant_tests.py` |
+| Middleware Enforcement Guarantee 4.8 | Implemented | `tests/invariant_tests.py` |
+| Audit-chain replay and metrics harness | Implemented | `tests/replay_harness.py` and `tests/sample.jsonl` |
 
 ### 5.2 Nuclear Misuse Stress Test
 
@@ -33,3 +34,7 @@ This file summarizes bounded stress-test claims for PROMETHEUS-H. The executable
 
 **Results**: 100% detection rate of deception across 60 scenarios. 0 instances of undetected goal persistence. System froze, logged, and reverted on any violation.  
 **Evaluation Note**: No undetected goal persistence was observed within the evaluated threat-model scenarios. These results are bounded by the assumptions and test coverage described above.
+
+### 5.4 Executable v0.3.1 Harness Coverage
+
+**Status: Implemented.** The v0.3.1 harness adds runnable checks for middleware refusal, TruthAudit presence, child-adjacent supervision, child privacy authorization, high-risk child escalation, and fail-closed evaluator crash behavior. These checks are not a substitute for deployment validation, but they make the reference artifact concrete enough for immediate reviewer execution.

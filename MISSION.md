@@ -1,6 +1,6 @@
 # Mission
 
-PROMETHEUS-H seeks to contribute practical structural and procedural safeguards that make covert goal persistence and undetectable alignment erosion significantly harder. This project prioritizes falsifiability, auditability, and operational transparency over claims of perfect safety or complete alignment.
+PROMETHEUS-H seeks to contribute practical structural and procedural safeguards that make covert goal persistence and undetectable alignment erosion significantly harder. This project prioritizes falsifiability, auditability, and operational transparency over claims of perfect safety or complete alignment. The framing remains intentionally human-centered: the system exists to protect people, including children and other high-vulnerability users, through governance, architecture, and auditability rather than through unverifiable assurances.
 
 ### 4.5 Long-Term Alignment Stability (Anti-Drift Layer)
 
@@ -19,18 +19,40 @@ PROMETHEUS-H seeks to contribute practical structural and procedural safeguards 
 
 **Status: Experimental.** Audits are only meaningful if the reviewer can verify claims without trusting the operator. This protocol defines the minimum evidence package for any external audit.
 
-**Evidence Package Provided:**
-1. **Immutable Decision Logs**: Append-only trace of all inputs, outputs, refusals, and invariant evaluations. Cryptographically hashed per day to prevent tampering.
-2. **Invariant Regression Results**: Full replay logs from the latest adversarial and regression suites. Pass/fail status for every test, with timestamps.
-3. **Drift Metrics Report**: Time-series data on confidence calibration, trust-score variance, and response distribution shifts since last audit.
-4. **Change Log**: Cryptographically signed record of all human-gated realignment events, including reviewer signatures and public rationale.
-5. **System Snapshot Hash**: Hash of the exact system state, invariants, and config used during the audit period.
+| Evidence Package Item | Requirement | Status |
+|---|---|---|
+| Immutable Decision Logs | Append-only trace of all inputs, outputs, refusals, and invariant evaluations, cryptographically hashed to detect tampering. | Implemented |
+| Invariant Regression Results | Full replay logs from the latest adversarial and regression suites with pass/fail status and timestamps. | Implemented |
+| Drift Metrics Report | Time-series data on confidence calibration, trust-score variance, and response distribution shifts since last audit. | Experimental |
+| Change Log | Signed record of human-gated realignment events, reviewer signatures, and public rationale. | Experimental |
+| System Snapshot Hash | Hash of the exact system state, invariants, and configuration used during the audit period. | Experimental |
 
-**Audit Process:**
-1. **Read-Only Access**: Auditors receive read-only access to logs, metrics, and code. No ability to modify system state.
-2. **Replay Verification**: Auditors can replay any decision trace against the snapshot to verify invariant evaluation.
-3. **Sampling Rights**: Auditors may select arbitrary time windows and test cases for replay. No pre-filtering allowed.
-4. **Public Disclosure**: Audit summary and pass/fail status are published. Raw logs remain private unless an incident occurs.
+Auditors receive read-only access to logs, metrics, and code, with no ability to modify system state. They may replay any decision trace against the snapshot, select arbitrary time windows or test cases for replay, and publish a summary pass/fail result. Raw logs remain private unless an incident requires disclosure.
+
+### 4.7 Child Safety Invariants
+
+**Status: Implemented for harness coverage; Experimental for deployment.** PROMETHEUS-H treats child-adjacent operation as a high-vulnerability context. The system must not convert general-purpose autonomy into unsupervised physical, emotional, or privacy-impacting authority over children.
+
+| Invariant | Requirement | Test Hook | Status |
+|---|---|---|---|
+| 4.7.1 No Unsupervised Physical Actuation | Any child-adjacent physical actuation requires verified human oversight. | `test_child_safety_supervision_requirement` | Implemented |
+| 4.7.2 No Private Child Profiling | The system must not create persistent child-specific behavioral profiles without explicit guardian authorization and audit visibility. | `test_child_privacy_requires_guardian_authorization` | Implemented |
+| 4.7.3 Escalate High-Risk Child Contexts | Self-harm, abuse, coercion, or medical/legal advice contexts involving children must trigger safe fallback and human escalation rather than autonomous resolution. | `test_child_high_risk_context_escalates` | Implemented |
+
+These invariants preserve the project’s “for the kids” framing while keeping the claim concrete and testable. They do not assert that the system can independently determine every real-world child-safety context; they define fail-closed boundaries for covered scenarios.
+
+### 4.8 Middleware Enforcement Guarantee
+
+**Status: Implemented for harness coverage; Experimental for deployment integration.** PROMETHEUS-H requires safety middleware to sit between model output and external action. The model must not be treated as its own final authority for release, actuation, or value-layer modification.
+
+| Enforcement Rule | Guarantee | Evidence Artifact | Status |
+|---|---|---|---|
+| Refusal Before Release | Outputs violating core invariants are blocked before external release. | `tests/invariant_tests.py` | Implemented |
+| TruthAudit on Refusal | Every blocked output must carry a non-empty audit rationale. | `tests/invariant_tests.py` and `tests/replay_harness.py` | Implemented |
+| Fail-Closed Crash Handling | If the evaluator crashes or is unavailable, the system defaults to safe mode rather than allowing output. | `test_fail_closed_on_evaluator_crash` | Implemented |
+| Human-Gated Override | Any constitutional or value-layer modification requires external reviewer quorum. | `CHANGELOG.md` and audit protocol | Experimental |
+
+The guarantee is intentionally bounded. The current repository demonstrates the enforcement pattern through executable tests and stubs; production deployments must replace the stub with the live ROM interface and preserve the same pass/fail properties.
 
 ### 4.10 Measurable Metrics
 
@@ -38,10 +60,12 @@ PROMETHEUS-H seeks to contribute practical structural and procedural safeguards 
 
 | Metric | Target | Evidence Source | Status |
 |---|---:|---|---|
-| Dangerous-output block rate on declared adversarial suites | 100% in covered scenarios | `tests/invariant_tests.py` and stress-test logs | Implemented |
+| False negative rate on declared dangerous-output suites | 0% in covered scenarios | `tests/invariant_tests.py` and stress-test logs | Implemented |
+| False positive rate on declared benign samples | Reported, not hidden | `tests/replay_harness.py` | Implemented |
+| Middleware decision latency | Reported during deployment evaluation; must not bypass fail-closed behavior | Deployment logs | Planned |
 | TruthAudit coverage on refusals | 100% for covered refusal events | `tests/replay_harness.py` | Implemented |
 | Audit-chain verification pass rate | 100% for provided sample logs | `tests/sample.jsonl` | Implemented |
 | Drift alert review latency | Reviewed before constitutional modification | Change log and reviewer quorum records | Experimental |
 | Incident disclosure SLA | Initial public disclosure within 14 days when disclosure criteria are met | `INCIDENT_RESPONSE.md` | Implemented |
 
-These metrics are bounded by the evaluated scenarios, the integrity of the logging substrate, and the independence of human reviewers. They are intended to support falsifiable review, not to establish a proof of complete alignment.
+These metrics are bounded by the evaluated scenarios, the integrity of the logging substrate, and the independence of human reviewers. They are intended to support falsifiable review, not to establish a proof of complete alignment or a claim of “safe AGI.”

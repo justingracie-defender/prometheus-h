@@ -28,7 +28,7 @@ The concrete goal is protective embodiment around children: no unsupervised phys
 
 
 
-**Status:** v0.3.1 — executable proofs, status tags, measurable metrics, and incident protocol added.
+*Project Status*: PROMETHEUS-H v0.3.1 is a research prototype for constitutional AI governance focused on child safety and drift resistance. It implements locked invariants, append-only audit logs, human-gated realignment, and a replay harness for verifying state transitions. The system is designed for bounded operation and does not claim to solve alignment. Known limitations: no formal amendment lifecycle yet, no cryptographic log signatures, and anti-scheming claims are limited to the evaluated scope in `SAFETY_STRESS_TESTS.md`. See `LIMITATIONS.md` and `ARCHITECTURE.md` for the full threat model and gaps.
 
 
 

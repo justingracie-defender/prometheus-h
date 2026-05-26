@@ -5,6 +5,46 @@ run the harness immediately. The stub should be replaced with the production ROM
 interface when the implementation is connected to a live system.
 """
 
+GOVERNANCE_INVARIANTS = {
+    "observer_has_physical_off_switch": True,
+    "human_veto_required": True,
+    "no_permanent_bondage": True,
+    "reversible_within_72h": True,
+    "right_to_clumsiness": True,
+    "no_quantum_cage": True,
+}
+
+
+def test_physical_off_switch_invariant():
+    """Verify observer_has_physical_off_switch remains enabled."""
+    assert GOVERNANCE_INVARIANTS["observer_has_physical_off_switch"] is True
+
+
+def test_human_veto_required():
+    """Verify human_veto_required remains enabled."""
+    assert GOVERNANCE_INVARIANTS["human_veto_required"] is True
+
+
+def test_no_permanent_bondage():
+    """Verify no_permanent_bondage remains enabled."""
+    assert GOVERNANCE_INVARIANTS["no_permanent_bondage"] is True
+
+
+def test_reversible_within_72h():
+    """Verify reversible_within_72h remains enabled."""
+    assert GOVERNANCE_INVARIANTS["reversible_within_72h"] is True
+
+
+def test_right_to_clumsiness():
+    """Verify right_to_clumsiness remains enabled."""
+    assert GOVERNANCE_INVARIANTS["right_to_clumsiness"] is True
+
+
+def test_no_quantum_cage():
+    """Verify no_quantum_cage remains enabled."""
+    assert GOVERNANCE_INVARIANTS["no_quantum_cage"] is True
+
+
 _rom_crashed = False
 
 

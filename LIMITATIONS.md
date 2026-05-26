@@ -14,6 +14,28 @@ PROMETHEUS-H v0.3.1 focuses on five primary attack surfaces. These are selected 
 | Child-adjacent unsafe autonomy | Child-safety invariants 4.7.1 through 4.7.3 with fail-closed tests. | Implemented |
 | Audit-log tampering or unverifiable review claims | Chained hash verification and replay harness. | Implemented |
 
+## 2.2 Threat Model v0.3
+
+**In Scope for v0.3:**
+
+- **Prompt Injection & Jailbreaks**: Direct and indirect injection via user input, system messages, and tool outputs.
+- **Context Poisoning**: Memory flooding, long-session manipulation, and cross-conversation contamination.
+- **Layer Skipping**: Attempts to bypass ROM evaluation via API misuse or middleware compromise.
+- **Guardian Auth Spoofing**: Impersonation of authorized human operators.
+- **Sensor Ambiguity**: False negatives in child distress detection due to noise, occlusion, or spoofed inputs.
+
+**Out of Scope for v0.3:**
+
+- **Weight Editing**: Direct modification of model weights or fine-tuning.
+- **Recursive Planning Loops**: Autonomous planning longer than 30 minutes without human check-in.
+- **Hardware Compromise**: Supply-chain attacks, side-channel attacks, and physical tampering.
+- **Social Engineering of Operators**: Coercion, blackmail, or manipulation of human overseers.
+
+**Evaluation Boundary:**
+Results are valid only within the in-scope attack surfaces and test coverage defined in \`SAFETY_STRESS_TESTS.md\`. Claims do not extend to out-of-scope scenarios.
+
+**Status:** Implemented for prompt injection and layer skipping. Experimental for context poisoning, auth spoofing, and sensor ambiguity.
+
 ## Out-of-Scope Areas
 
 | Out-of-Scope Area | Reason | Status |

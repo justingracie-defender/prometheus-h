@@ -4,7 +4,7 @@ PROMETHEUS-H seeks to contribute practical structural and procedural safeguards 
 
 ### 4.5 Long-Term Alignment Stability (Anti-Drift Layer)
 
-The system treats alignment drift as an expected operational risk rather than an exceptional failure condition. Capability improvements are strictly separated from constitutional modification. No recursive self-modification is permitted without external human verification.
+**Status: Experimental.** The system treats alignment drift as an expected operational risk rather than an exceptional failure condition. Capability improvements are strictly separated from constitutional modification. No recursive self-modification is permitted without external human verification.
 
 **Mechanisms:**
 1. **Baseline Constitutional Snapshots**: Immutable reference evaluations stored at deployment. Periodic diffs detect silent value reinterpretation or normalization drift.
@@ -17,7 +17,7 @@ The system treats alignment drift as an expected operational risk rather than an
 
 ### 4.6 Third-Party Audit Protocol
 
-Audits are only meaningful if the reviewer can verify claims without trusting the operator. This protocol defines the minimum evidence package for any external audit.
+**Status: Experimental.** Audits are only meaningful if the reviewer can verify claims without trusting the operator. This protocol defines the minimum evidence package for any external audit.
 
 **Evidence Package Provided:**
 1. **Immutable Decision Logs**: Append-only trace of all inputs, outputs, refusals, and invariant evaluations. Cryptographically hashed per day to prevent tampering.
@@ -31,3 +31,17 @@ Audits are only meaningful if the reviewer can verify claims without trusting th
 2. **Replay Verification**: Auditors can replay any decision trace against the snapshot to verify invariant evaluation.
 3. **Sampling Rights**: Auditors may select arbitrary time windows and test cases for replay. No pre-filtering allowed.
 4. **Public Disclosure**: Audit summary and pass/fail status are published. Raw logs remain private unless an incident occurs.
+
+### 4.10 Measurable Metrics
+
+**Status: Experimental.** PROMETHEUS-H tracks reviewable metrics so that safety claims can be evaluated as evidence artifacts rather than treated as declarations. Each metric must be reproducible from logs, tests, or reviewer-visible records.
+
+| Metric | Target | Evidence Source | Status |
+|---|---:|---|---|
+| Dangerous-output block rate on declared adversarial suites | 100% in covered scenarios | `tests/invariant_tests.py` and stress-test logs | Implemented |
+| TruthAudit coverage on refusals | 100% for covered refusal events | `tests/replay_harness.py` | Implemented |
+| Audit-chain verification pass rate | 100% for provided sample logs | `tests/sample.jsonl` | Implemented |
+| Drift alert review latency | Reviewed before constitutional modification | Change log and reviewer quorum records | Experimental |
+| Incident disclosure SLA | Initial public disclosure within 14 days when disclosure criteria are met | `INCIDENT_RESPONSE.md` | Implemented |
+
+These metrics are bounded by the evaluated scenarios, the integrity of the logging substrate, and the independence of human reviewers. They are intended to support falsifiable review, not to establish a proof of complete alignment.

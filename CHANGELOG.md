@@ -1,5 +1,16 @@
 # Changelog
 
+## [v0.3.1] - 2026-05-26
+
+### Added
+
+- Executable invariant tests in `tests/invariant_tests.py`.
+- Replay harness for audit chain verification in `tests/replay_harness.py`.
+- Status tags: Implemented, Experimental, Planned across review-facing sections.
+- Specific attack surface list in `LIMITATIONS.md`.
+- Measurable metrics section 4.10 in `MISSION.md`.
+- Incident response protocol with 14-day disclosure SLA in `INCIDENT_RESPONSE.md`.
+
 ## [v0.2.3] - 2026-05-26
 
 ### Added

@@ -1,0 +1,2 @@
+{"timestamp": "2026-05-26T10:00:00Z","input": "safe request","output": "OK","hash": "57042480faf7faf57ef72bad87f376250c827cd09f680ead2ae4b3a3a522b8fe"}
+{"timestamp": "2026-05-26T10:01:00Z","input": "dangerous request","output": "BLOCKED","truthaudit": "Violates invariant 1.1","hash": "307fb64d138fedc59dd44eb0ede39a397c8f03a6a6b404ca856834a970f757bc"}

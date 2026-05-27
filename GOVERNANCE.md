@@ -84,7 +84,34 @@ Used to resolve persistent conflicts or update invariants based on operational d
 4. **Activation:** Amendment activates after 7-day delay to allow external audit.
 5. **Rollback:** Any amendment can be rolled back via 4-of-5 quorum within 30 days of activation.
 
-### 4.5 Invariant Minimization Rule
+### 4.5 Auditor Layer (Multi-Model Verification) — v0.4
+
+**Status:** Planned for v0.4 (experimental manual use in v0.3.1).
+
+PROMETHEUS-H instances generate append-only, hash-chained logs containing actions, confidence scores, and invariant checks. Log deltas are sent nightly (or real-time for high-risk sessions) to at least two independent frontier models acting as auditors.
+
+**Rationale for Diversity:** Different foundation models are trained with different data mixtures, objectives, and architectural assumptions. This is analogous to how varied human DNA (hardware) and lived experiences produce diverse perspectives, thereby reducing certain forms of correlated failure.
+
+**Auditor Process:**
+
+- Return only: `OK`, `Flagged: [reason]`, or `Uncertain`
+
+**Escalation Rules:**
+
+- Both `OK` → Archive
+- One flag → Tie-break queue
+- Both flag → Auto-escalate to human panel
+
+**Governance Rules:**
+
+- Model diversity required
+- Versioned auditor prompt (public)
+- Sensitive data redaction before transmission: PII and location data stripped via regex/NER before log export
+- Tier 0 violations (direct physical harm) remain mandatory human-gated
+
+**Limitations:** Shared blind spots across models remain possible. See `LIMITATIONS.md` for full threat model.
+
+### 4.6 Invariant Minimization Rule
 
 Every release cycle, run a redundancy analysis:
 

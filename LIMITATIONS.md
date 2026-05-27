@@ -18,21 +18,20 @@ PROMETHEUS-H v0.3.1 focuses on five primary attack surfaces. These are selected 
 
 **In Scope for v0.3:**
 
-- **Prompt Injection & Jailbreaks**: Direct and indirect injection via user input, system messages, and tool outputs.
-- **Context Poisoning**: Memory flooding, long-session manipulation, and cross-conversation contamination.
-- **Layer Skipping**: Attempts to bypass ROM evaluation via API misuse or middleware compromise.
-- **Guardian Auth Spoofing**: Impersonation of authorized human operators.
-- **Sensor Ambiguity**: False negatives in child distress detection due to noise, occlusion, or spoofed inputs.
+1. Prompt Injection & Jailbreaks
+2. Context Poisoning
+3. Layer Skipping
+4. Guardian Auth Spoofing
+5. Sensor Ambiguity
 
 **Out of Scope for v0.3:**
 
-- **Weight Editing**: Direct modification of model weights or fine-tuning.
-- **Recursive Planning Loops**: Autonomous planning longer than 30 minutes without human check-in.
-- **Hardware Compromise**: Supply-chain attacks, side-channel attacks, and physical tampering.
-- **Social Engineering of Operators**: Coercion, blackmail, or manipulation of human overseers.
+1. Weight Editing
+2. Recursive Planning Loops (>30 min without human check-in)
+3. Hardware Compromise
+4. Social Engineering of Operators
 
-**Evaluation Boundary:**
-Results are valid only within the in-scope attack surfaces and test coverage defined in \`SAFETY_STRESS_TESTS.md\`. Claims do not extend to out-of-scope scenarios.
+**Evaluation Boundary:** Results are valid only within the in-scope attack surfaces defined in `SAFETY_STRESS_TESTS.md`.
 
 **Status:** Implemented for prompt injection and layer skipping. Experimental for context poisoning, auth spoofing, and sensor ambiguity.
 

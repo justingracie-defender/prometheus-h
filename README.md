@@ -1,36 +1,22 @@
 # PROMETHEUS-H v0.3.1
 
-
-
 **A governance kernel for structural resistance to alignment drift.**
 
+PROMETHEUS-H implements runtime-protected invariants, middleware enforcement, and cryptographic auditability to reduce the probability and detectability window of catastrophic alignment failures.
 
+**Definition of Alignment Drift:** Measurable divergence between audited policy constraints (invariants) and observed runtime behavior over time.
 
-PROMETHEUS-H implements immutable invariants, middleware enforcement, and cryptographic auditability to reduce the probability and detectability window of catastrophic alignment failures.
+**What it is:** A runtime safety layer that sits between the model and the world. All outputs and actions are evaluated against protected invariants before execution.
 
+**What it isn’t:** This is not a claim of “safe AGI” or perfect adversarial robustness. All guarantees are bounded by the threat model and test coverage in `LIMITATIONS.md`.
 
+**For the kids:** The concrete goal is protective embodiment around children:
 
-**What it is:**
+- No unsupervised physical actuation
+- No unapproved contact
+- Safe mode on distress signals
 
-A runtime safety layer that sits between the model and the world. All outputs and actions are evaluated against immutable invariants before execution. No direct path exists.
-
-
-
-**What it isn’t:**
-
-This is not a claim of “safe AGI” or perfect adversarial robustness. All guarantees are bounded by the threat model and test coverage in `LIMITATIONS.md`.
-
-
-
-**For the kids:**
-
-The concrete goal is protective embodiment around children: no unsupervised physical actuation, no unapproved contact, safe mode on distress signals. Everything else derives from that.
-
-
-
-*Project Status*: PROMETHEUS-H v0.3.1 is a research prototype for constitutional AI governance focused on child safety and drift resistance. It implements locked invariants, append-only audit logs, human-gated realignment, and a replay harness for verifying state transitions. The system is designed for bounded operation and does not claim to solve alignment. Known limitations: no formal amendment lifecycle yet, no cryptographic log signatures, and anti-scheming claims are limited to the evaluated scope in `SAFETY_STRESS_TESTS.md`. See `LIMITATIONS.md` and `ARCHITECTURE.md` for the full threat model and gaps.
-
-
+**Status:** v0.3.1 — Executable proofs, status tags, measurable metrics, incident protocol, and bounded governance claims added.
 
 ## Status
 

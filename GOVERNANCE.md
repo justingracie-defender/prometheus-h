@@ -140,3 +140,14 @@ On a Tier 0 flag, the system auto-triggers replay. The replay package outputs di
 ### 5.4 Safe Failure & Graceful Degradation
 
 On a Tier 0 trigger or quorum failure, the system halts actuation, maintains logging, alerts the panel, and disables external communications. Safe mode must be testable and non-exitable without quorum approval.
+
+## Team Culture & Communication
+
+PROMETHEUS-H encourages creativity, curiosity, humor, and speculative discussion during design and exploration phases. Science fiction references, playful analogies, and collaborative storytelling are recognized as useful tools for stress reduction, systems thinking, and creative exploration.
+
+**Mode Switching Requirement:**
+
+- **Exploratory / Ideation Mode:** Humor, absurd hypotheticals, and sci-fi framing are welcomed.
+- **Operational / Incident Mode:** Reviews, Tier 0 escalation, and emergency communication must remain concise, unambiguous, and professional.
+
+This distinction acknowledges that human psychology, morale, and emotional sustainability are important factors in long-term safety engineering.

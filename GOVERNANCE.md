@@ -120,3 +120,23 @@ Every release cycle, run a redundancy analysis:
 - Max 15 active invariants. Exceeding this triggers a simplification review.
 
 **Rationale:** This gives the system a way to evolve without drifting silently. Tiering prevents low-priority rules from blocking safety-critical ones. The bounded override prevents deadlock but keeps humans in the loop. The amendment lifecycle ensures changes are deliberate and auditable.
+
+## 5. v0.4 Roadmap: Executable Governance Layer
+
+The v0.4 roadmap converts the current governance draft into a more directly enforceable layer. Each item below is planned as a bounded, auditable mechanism rather than a claim of complete safety.
+
+### 5.1 Immutable Event Ledger
+
+Extend `tests/replay_harness.py` to compute Merkle roots per session. Store roots in `ledger/roots.jsonl` and add a CLI entry point, `prometheus verify-ledger`, for reviewer verification.
+
+### 5.2 Quorum-Based Override System
+
+Override actions require 2-of-3 signatures from panel keys. Each override is logged immutably with rationale, affected invariant, actor identity, and timestamp. A 30-minute timeout escalates unresolved override attempts to the full panel.
+
+### 5.3 Mandatory Incident Replay
+
+On a Tier 0 flag, the system auto-triggers replay. The replay package outputs diffs, invariant checks, and auditor summaries to `incidents/YYYY-MM-DD-<id>/` for review and post-mortem analysis.
+
+### 5.4 Safe Failure & Graceful Degradation
+
+On a Tier 0 trigger or quorum failure, the system halts actuation, maintains logging, alerts the panel, and disables external communications. Safe mode must be testable and non-exitable without quorum approval.

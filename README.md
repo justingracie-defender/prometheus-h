@@ -72,6 +72,10 @@ Expected output includes all invariant tests passing, audit-chain integrity repo
 
 | `LIMITATIONS.md` | Specific threat model, attack surfaces, and out-of-scope boundaries. | Implemented |
 
+| `GOVERNANCE.md` | v0.4 governance roadmap, auditor layer, quorum escalation, and safe-failure planning. | Planned v0.4 |
+
+| `GOVERNANCE_PRINCIPLES.md` | Socio-technical feedback stability model for human-system governance. | Planned v0.4 |
+
 | `SAFETY_STRESS_TESTS.md` | Bounded stress-test summaries and review status. | Implemented |
 
 | `INCIDENT_RESPONSE.md` | Incident protocol, 14-day disclosure SLA, and post-mortem requirement. | Implemented |

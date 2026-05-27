@@ -1,5 +1,20 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- v0.4 roadmap draft for an executable governance layer in `GOVERNANCE.md`.
+- `GOVERNANCE_PRINCIPLES.md` with a socio-technical feedback stability model.
+
+### Planned for v0.4
+
+- Immutable event ledger with per-session Merkle roots.
+- Quorum-based override system with 2-of-3 signatures and escalation timeout.
+- Mandatory incident replay for Tier 0 flags.
+- Safe failure and graceful degradation behavior for Tier 0 triggers or quorum failure.
+
+
 ## [v0.3.1] - 2026-05-26
 
 ### Added

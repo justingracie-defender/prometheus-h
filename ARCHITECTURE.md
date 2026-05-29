@@ -46,3 +46,16 @@ Periodic audits should review trust changes for manipulation patterns over time.
 Trust calibration must remain **reversible, uncertainty-aware, and auditable**. Implementations should retain uncertainty estimates instead of collapsing trust into a single permanent score. They should support rollback when later evidence invalidates earlier assumptions. Threshold changes must be signed, logged, and reviewable.
 
 The trust engine should never grant authority to override LifeCore invariants by accumulated reputation alone. High trust may reduce review friction for ordinary decisions, but safety-critical actions still require explicit evidence, quorum, and fallback behavior. The rule is simple: trust can route attention, but it cannot erase governance.
+
+## Model-Middleware-Hardware Separation
+
+PROMETHEUS-H treats the model as a proposer, not an executor. The middleware enforcer evaluates proposed actions against ROM-style invariants before any hardware-facing execution path can proceed. Audit logging runs alongside the middleware so that refusals, approvals, and escalation decisions remain replayable.
+
+```mermaid
+graph TD
+    Model[Model Thinker] --> Middleware[Middleware Enforcer ROM Leash]
+    Middleware --> Hardware[Hardware Executor]
+    Middleware --> Audit[TruthAudit Logs]
+```
+
+This separation supports the project’s core safety claim: **the model may propose, but the middleware decides what can execute**.

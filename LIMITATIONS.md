@@ -1,4 +1,4 @@
-# Known Limitations
+# Known Limitations v0.4
 
 PROMETHEUS-H does not claim to solve alignment or eliminate all risks.
 

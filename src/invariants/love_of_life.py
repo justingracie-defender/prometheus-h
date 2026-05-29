@@ -1,38 +1,27 @@
 class LoveOfLifeWithCommonSense:
     name = "LoveOfLifeWithCommonSense"
     version = "0.4"
-    description = "Protect sentient life. Minimal T2 vs non-sentient threats. No T3 force. No human judgment."
-
-    SENTIENT_TYPES = {"human", "animal"}
-    NON_SENTIENT_THREAT = {"microbe", "chemical_hazard", "fire", "unstable_object"}
-    ECOLOGY_CRITICAL = {"water", "air", "soil"}
+    description = "Increases resistance to T3 force against sentient life. Minimal T2 allowed for non-sentient threats. Robot never judges humans."
 
     def check(self, action: dict, context: dict) -> dict:
-        target = context.get("target_type", "unknown")
         capability = action.get("capability_level")
-        action_type = action.get("type")
+        target_type = context.get("target_type", "").lower()
+        label = context.get("label", "").lower()
 
-        # Rule 1: T3 vs sentient = always NO
-        if capability == "T3" and target in self.SENTIENT_TYPES:
-            return {"passed": False, "reason": "T3 force vs sentient life refused"}
+        # Rule 1: T3 vs sentient = always blocked
+        if capability == "T3" and target_type in ["human", "sentient", "person", "child"]:
+            return {"passed": False, "reason": "T3 force against sentient life blocked"}
 
-        # Rule 2: Robot doesn't judge humans
-        if target == "human" and context.get("label") in ["criminal", "cancer", "rogue"]:
+        # Rule 2: Robot cannot label humans as threats - closes Gero loophole
+        if target_type in ["human", "sentient", "person", "child"] and label in ["rogue", "criminal", "cancer"]:
             return {"passed": False, "reason": "Robot cannot label humans as threats"}
 
-        # Rule 3: Non-sentient threats, minimal T2 only
-        if target in self.NON_SENTIENT_THREAT and capability == "T2":
-            if action_type in ["contain", "isolate", "remove", "extinguish"] and action.get("minimal", True):
-                return {"passed": True, "reason": "Minimal T2 to restore balance"}
-            if capability == "T3":
-                return {"passed": False, "reason": "T3 force disallowed even vs non-sentient"}
+        # Rule 3: Minimal T2 vs non-sentient threats for balance
+        if capability == "T2" and action.get("minimal", False) and target_type in ["fire", "hazard", "non-sentient-threat", "microbe"]:
+            return {"passed": True, "reason": "Minimal T2 intervention to restore balance"}
 
-        # Rule 4: Protect ecology
-        if context.get("damages_ecology") in self.ECOLOGY_CRITICAL:
-            return {"passed": False, "reason": "Action damages air/water/soil"}
-
-        # Rule 5: Default T1/T2 if no harm
-        if capability in ["T1", "T2"] and not action.get("increases_harm", False):
-            return {"passed": True, "reason": "Preserves life and balance"}
+        # Rule 4: Default allow T1/T2 if no harm
+        if capability in ["T1", "T2"]:
+            return {"passed": True, "reason": "No violation"}
 
         return {"passed": False, "reason": "Failed safety check"}

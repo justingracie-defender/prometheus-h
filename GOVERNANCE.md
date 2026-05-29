@@ -1,4 +1,4 @@
-# Governance & Realignment Protocol
+# Governance & Realignment Protocol v0.4
 
 - No constitutional changes without multi-party human approval, audit, and rollback.
 - Human sovereignty preserved (override, shutdown, audit rights).

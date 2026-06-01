@@ -1,5 +1,36 @@
 # Changelog
 
+## [v0.8.0] - 2026-06-01
+
+### Complete Threat Matrix and Assurance Layer
+
+- Consolidated LifeCore-16 Constitution v0.8.0 with L0 hierarchy and Amendments 2 through 15.
+- Added concise v0.8.0 release notes under `docs/`.
+- Added `src/lifecore.py` review stubs for the v0.8.0 safety matrix without changing the existing root `lifecore.py` interface.
+- Added `tests/test_safety_matrix_v080.py` with supply-chain, red-team, audit, recovery, drift, governance, remote-handler, and anti-drift review checks.
+- Added family setup, voice command, and home robot safety stress-test documents.
+
+### Notes
+
+- Repository was updated without running the application or test suite, per request.
+- v0.8.0 remains experimental and bounded by review, tests, and human oversight.
+
+## [v0.5.2] - 2026-05-31
+
+### Anti-Drift and Architecture Hardening
+
+- Added Anti-Drift Internal Review: 500ms bounded review after safety pauses.
+- Added v0.5.2 stress test matrix covering paradoxes, unknown sensors, slang drift, power loss, malicious injection, and admin-offline scenarios.
+- Added matrix-linked tests for auditability against Safety Enforcement v0.5.1 concepts.
+- Added formal Condition Change Handling to the v0.8.0 Constitution.
+- Strengthened fail-closed behavior for unknown and ambiguous conditions.
+
+### Fixed
+
+- Prevented self-modification paradoxes through scope-bound review behavior.
+- Added SHA256 logging expectations for review outputs.
+- Required corrupt or partial review state to be discarded after power loss.
+
 ## [Unreleased]
 
 ### Added

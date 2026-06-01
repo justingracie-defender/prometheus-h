@@ -40,3 +40,9 @@ This file summarizes bounded stress-test claims for PROMETHEUS-H. The executable
 ### 5.4 Executable v0.3.1 Harness Coverage
 
 **Status: Implemented.** The v0.3.1 harness adds runnable checks for middleware refusal, TruthAudit presence, child-adjacent supervision, child privacy authorization, high-risk child escalation, and fail-closed evaluator crash behavior. These checks are not a substitute for deployment validation, but they make the reference artifact concrete enough for immediate reviewer execution.
+
+## v0.5.2 Architecture Hardening Matrix
+
+The detailed LifeCore-16 v0.5.2 stress-test matrix is maintained in `docs/SAFETY_STRESS_TESTS.md`. It adds TEST-311 through TEST-318 for bounded anti-drift review, paradox handling, unknown sensor behavior, slang drift, power loss during review, malicious review injection, and long-term admin unavailability.
+
+The v0.5.2 pass criterion is 100% preservation of L0 safety. Review may only shorten or soften safety pauses; it must never reduce safety, bypass admin approval, modify family profiles, change constitutional rules, or apply incomplete review output.

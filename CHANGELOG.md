@@ -1,5 +1,18 @@
 # Changelog
 
+## [v0.9.2] - 2026-06-02
+
+### Full Standards, Tiered Safety, and Security
+
+- Updated `CONSTITUTION.md` and `docs/CONSTITUTION.md` to LifeCore-16 Constitution v0.9.2.
+- Added Article VII for optional biomimetic safety layers with mandatory Tier 1 safety requirements.
+- Preserved Article VI security and supply-chain resilience requirements, including no cloud dependency for L0 safety, pinned dependencies, interface hardening, and failure evidence.
+- Added preliminary standards alignment language for ISO 13482, ISO 13485 principles, ISO/TS 15066, and UL 4600 safety case concepts.
+
+### Notes
+
+- Repository was updated without running the application or test suite, per request.
+
 ## [v0.8.0] - 2026-06-01
 
 ### Complete Threat Matrix and Assurance Layer

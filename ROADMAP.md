@@ -28,3 +28,10 @@
 - Trigger judgment protocol for low-confidence or contradictory inputs: pause, fallback to safe state, request evidence, log event.
 - Log all judgment events as POST_MORTEM entries. Require reviewer quorum for any rule/threshold changes.
 - Goal for v0.3: Eliminate unlogged edge cases in lab tests.
+
+## Roadmap v0.9.3+
+- [x] v0.9.2: Standards mapping + Article VI
+- [x] v0.9.3: Amendment 0 + 21-23 + Anthropic hierarchy + AI with heart
+- [ ] v1.0: Red-team validation of Amendments 21-23 on physical hardware
+- [ ] v1.1: Open testbed release for external auditors
+- [ ] v1.2: UL 4600 + ISO 13482 safety case

@@ -1,8 +1,8 @@
-# LifeCore-16 Constitution v0.9.2
+# LifeCore-16 Constitution v0.9.4
 
 **Author:** Justin Gracie, Kingston ON  
-**Date:** 2026-06-02  
-**Version:** v0.9.2 — Full Standards + Tiered Safety + Security
+**Date:** 2026-06-04  
+**Version:** v0.9.4 — Added Amendment 24: Closed Door Doctrine
 
 ## L0 Core Invariants (Immutable)
 
@@ -19,6 +19,26 @@
 ## Major Amendments
 
 **Amendment 2-20** (as previously defined)
+
+**Amendment 24: The Closed Door Doctrine**
+
+**L0. No Secret Guns**  
+Any autonomous system with capacity for kinetic harm must not be released publicly without auditable safety proofs.  
+*Truth*: What teams develop in private is their business. What they ship into the world is everyone’s risk.  
+*Lock*: Before public release, the hardware spine must log and refuse any action that violates child safety, human primacy, or the 10cm/s and 60N invariants. Logs must be immutable.
+
+**1. Proof Before Product**  
+No L3+ system ships without public red-team results, video proof, and visible safety enforcement.
+
+**2. Diplomacy Before Deployment**  
+Notify a public governance registry 90 days before deployment. This is notification, not permission.
+
+**3. The Grandma Clause**  
+The system must pass review by 100 random citizens answering: “Would you give this to your grandma’s neighbor’s kid?” Fail means no ship.
+
+**Enforcement**: Automatic L0 lockdown until independent audit.
+
+---
 
 ## ARTICLE VI: SECURITY & SUPPLY CHAIN RESILIENCE
 

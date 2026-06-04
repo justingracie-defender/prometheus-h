@@ -1,7 +1,7 @@
-# LifeCore Human Survival Constitution v0.9.3
+# LifeCore Human Survival Constitution v0.9.4
 **Author:** Justin Gracie, Kingston ON
-**Date:** 2026-06-03
-**Version:** v0.9.3 - Human Primacy + Civilizational Safeguards + AI with Heart
+**Date:** 2026-06-04
+**Version:** v0.9.4 - Human Primacy + Civilizational Safeguards + AI with Heart + Closed Door Doctrine
 **Philosophy:** AI is a tool. Freedom is const=True. For the kids. For all humanity.
 
 ## Amendment 0: HUMAN PRIMACY OVER ALL MACHINES

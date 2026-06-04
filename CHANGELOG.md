@@ -1,5 +1,22 @@
 # Changelog
 
+## [v0.9.4] - 2026-06-04
+
+### Added
+
+- Added Amendment 24: The Closed Door Doctrine to `CONSTITUTION.md` and `docs/CONSTITUTION.md`.
+- Added public-release safeguards requiring proof before product, diplomacy before deployment, and the Grandma Clause review for L3+ kinetic systems.
+- Added `ports/manus/MANUS_INTEGRATION.md` checklist for implementing LifeCore safety expectations in a Manus-controlled or Manus-assisted system.
+
+### Changed
+
+- Updated README civilizational safeguards to include Amendment 24.
+- Updated the public summary to mention the Closed Door Doctrine.
+
+### Notes
+
+- Repository update is prepared without cloning the repository and without running application or test code, per request.
+
 ## [v0.9.2] - 2026-06-02
 
 ### Full Standards, Tiered Safety, and Security

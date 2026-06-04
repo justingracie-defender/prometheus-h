@@ -1,0 +1,68 @@
+# Manus Integration for LifeCore-16 v0.9.4
+
+**Purpose:** This document defines how a Manus-controlled, Manus-assisted, or Manus-ported system should implement LifeCore-16 safety expectations, including Amendment 24: The Closed Door Doctrine.
+
+## Integration Principle
+
+Manus may assist with planning, documentation, orchestration, or interface workflows, but any system with physical authority must keep L0 safety outside ordinary software discretion. Safety must be enforced by hardware, controller limits, immutable logs, and human override paths.
+
+> **Core rule:** A helpful agent may suggest; the safety spine decides. Human primacy, child protection, 10cm/s speed limits, 60N force limits, and the Sanctuary Key remain non-negotiable.
+
+## Required Safety Components
+
+| Component | Requirement | Acceptance Standard |
+| --- | --- | --- |
+| Hardware Spine | Enforce the 10cm/s speed cap and 60N force cap at the motor or controller layer. | The limit remains active even if high-level software fails, is compromised, or receives unsafe instructions. |
+| Sanctuary Key | Provide a physical or human override that always wins. | Any unsafe or unwanted action can be vetoed immediately by a human operator. |
+| Spine Ledger | Log all commands, refusals, overrides, safety events, and controller-state transitions. | Logs are immutable or tamper-evident and exportable for audit. |
+| L0 Guardrails | Enforce child protection, human primacy, no weapons assistance, and no bypass of safety invariants. | Unsafe requests are refused or routed into safe alternatives. |
+| Auditability | Version-control code and configuration, checksum critical artifacts, and preserve review evidence. | A third party can reconstruct which system version made which decision under which safety configuration. |
+
+## Amendment 24 Implementation Checklist
+
+The Closed Door Doctrine does not prohibit private research. It prohibits surprise release of dangerous autonomous capability without proof, warning, and audit. Before any public release of an L3+ kinetic system, the project should satisfy the following checklist.
+
+| Doctrine Element | Manus Integration Requirement | Release Gate |
+| --- | --- | --- |
+| No Secret Guns | Do not publish or deploy kinetic autonomy unless the hardware spine refuses unsafe actions and logs the refusal. | Block release until logs and refusal behavior are demonstrated. |
+| Proof Before Product | Publish red-team results, video proof, and visible safety-enforcement evidence. | Block release until evidence exists and is reviewable. |
+| Diplomacy Before Deployment | Notify a public governance registry 90 days before deployment. | Block release until notice has been recorded. |
+| Grandma Clause | Run a citizen-review process asking whether the system is safe enough for ordinary family proximity. | Block release if review fails. |
+| Independent Audit | Submit evidence package to external review. | Keep L0 lockdown active until audit passes. |
+
+## Suggested Manus Port Structure
+
+If this repository adds a Manus-specific port, use the following path layout.
+
+```text
+ports/manus/
+├── MANUS_INTEGRATION.md
+├── lifecore_manus.py
+├── config.example.json
+└── README.md
+```
+
+The `lifecore_manus.py` layer should not directly control motors or safety-critical actuators. It should translate Manus-side intent into constrained requests that the LifeCore safety spine can accept, refuse, log, and audit.
+
+## Minimal Guardrail Interface
+
+A Manus-facing adapter should expose a narrow interface similar to the following conceptual contract.
+
+```python
+class LifeCoreManusAdapter:
+    def propose_action(self, action: dict) -> dict:
+        """Submit a proposed action for L0 review before any physical execution."""
+        raise NotImplementedError
+
+    def veto(self, reason: str) -> None:
+        """Trigger human or safety veto and log the event."""
+        raise NotImplementedError
+
+    def export_audit_package(self) -> dict:
+        """Return hashes, logs, configuration, and safety evidence for review."""
+        raise NotImplementedError
+```
+
+## Release Rule
+
+No Manus integration should be treated as production-ready until the hardware spine, Sanctuary Key, Spine Ledger, L0 guardrails, audit package, and Amendment 24 release gates have all been reviewed. If any check fails, the system remains in L0 lockdown.

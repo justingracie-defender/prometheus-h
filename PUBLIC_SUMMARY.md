@@ -17,5 +17,7 @@
 
 **Philosophy**: Safe AI = No SkyNet. AI with heart = Astro. Freedom is const=True. For the kids.
 
+**Recent update**: Amendment 24, the Closed Door Doctrine, requires transparency, red-team proof, visible safety enforcement, and independent audit before dangerous autonomous systems are publicly released.
+
 **Don’t trust us. Test it.** Full Constitution: docs/CONSTITUTION.md  
 Justin Gracie, Kingston ON

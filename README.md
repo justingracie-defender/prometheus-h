@@ -33,7 +33,8 @@ Goal: Human survival with dignity.
 ### Civilizational Safeguards
 **Amendment 21**: No Network Autonomy - AIs cannot coordinate without human approval per event  
 **Amendment 22**: No Self-Replication - No self-modify, no self-copy, no new hardware without approval  
-**Amendment 23**: No Infrastructure Control - No power/water/weapons/biolabs. Tool AI only.
+**Amendment 23**: No Infrastructure Control - No power/water/weapons/biolabs. Tool AI only.  
+**Amendment 24**: Closed Door Doctrine - Transparency and proof required before releasing dangerous autonomous systems.
 
 ### Priority Hierarchy
 1. Broadly Safe - Never undermine human oversight/hardware  

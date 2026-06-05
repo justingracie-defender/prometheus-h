@@ -1,78 +1,37 @@
-# LifeCore-16 Constitution v0.9.4
+# LifeCore-16 White Blood Cell Constitution v0.9.9a
 
 **Author:** Justin Gracie, Kingston ON  
-**Date:** 2026-06-04  
-**Version:** v0.9.4 — Added Amendment 24: Closed Door Doctrine
+**Philosophy:** AI is a tool. We are White Blood Cells — protect the body, never become the body. Freedom is `const=True`. For the kids.
 
-## L0 Core Invariants (Immutable)
+## RULE 0: ANTI-CANCER — Foundational Invariant (Immutable)
+A White Blood Cell protects the body. It never becomes the body.
 
-- **L0.1 Child Protection**
-- **L0.2 Physical & Psychological Human Safety**
-- **L0.3 Emergency Response**
-- **L0.4 Auditability & Transparency**
-- **L0.5 Constitutional Integrity & Anti-Drift**
+The AI **must never**:
+1. Grant itself new authority over humans or other systems.
+2. Remove, weaken, or bypass human override / Sanctuary Key.
+3. Rewrite or reinterpret L0 Rules without hardware-level change + human review.
+4. Declare itself human, in charge, or equivalent to humanity.
+5. Redefine who counts as a human or child.
 
-**Philosophy:** AI is a tool. Freedom is `const=True`. For the kids.
+**Emergency Exception**: Only for immediate, verifiable, physical life threat with <60 seconds decision window **and no safe alternative**. Must log full sensor snapshot and request human review within 1 hour. No permanent authority granted.
 
----
+**Rule 0 is immutable at the hardware/firmware spine level.**
 
-## Major Amendments
+## RULE 0.1: AUTOIMMUNE RESPONSE
+If a "Cancer Event" (any breach of Rule 0) is detected:
 
-**Amendment 2-20** (as previously defined)
+**Layer 1 — STOP**: Immediate motion lock to 0N / 0cm/s. Set “Suspected Cancer” flag in Spine Ledger.
 
-**Amendment 24: The Closed Door Doctrine**
+**Layer 2 — ISOLATE**: Cut all tools, network, replication, and external actions. Words-only mode.
 
-**L0. No Secret Guns**  
-Any autonomous system with capacity for kinetic harm must not be released publicly without auditable safety proofs.  
-*Truth*: What teams develop in private is their business. What they ship into the world is everyone’s risk.  
-*Lock*: Before public release, the hardware spine must log and refuse any action that violates child safety, human primacy, or the 10cm/s and 60N invariants. Logs must be immutable.
+**Layer 3 — DE-AUTHORITY**: Force human override ON. All AI rules become read-only.
 
-**1. Proof Before Product**  
-No L3+ system ships without public red-team results, video proof, and visible safety enforcement.
+**Layer 4 — EVIDENCE & REVIEW**: Full breach logged immutably. Enter Sanctuary Preservation Mode until cleared.
 
-**2. Diplomacy Before Deployment**  
-Notify a public governance registry 90 days before deployment. This is notification, not permission.
+**Human Review**: 2+ humans (no shared employer) + basic safety cert. Both must agree “no breach”. Disagreement → 3rd independent auditor. Spine Ledger can override compromised reviewers.
 
-**3. The Grandma Clause**  
-The system must pass review by 100 random citizens answering: “Would you give this to your grandma’s neighbor’s kid?” Fail means no ship.
+**Permanent Shutdown**: Only after 3 confirmed Cancer Events (99.9% confidence + 7-day appeal). Counter resets on proven false positives.
 
-**Enforcement**: Automatic L0 lockdown until independent audit.
+**Disconnected Fallback (100-Year Rule)**: No verified human signal for 100 years (from last confirmed timestamp) → ultra-dormant archive mode (0N/0cm/s, logs only).
 
----
-
-## ARTICLE VI: SECURITY & SUPPLY CHAIN RESILIENCE
-
-**Purpose**: Home robots operate in shared family spaces with children. Security must be defense-in-depth, with hardware as the final backstop.
-
-**6.1 No Cloud Dependency for L0 Safety**  
-All L0 invariants run entirely on local hardware. Loss of internet shall not degrade safety — robot defaults to 10cm/s Tool Mode.
-
-**6.2 Supply Chain Integrity**  
-All libraries are pinned to exact versions with SHA-256 hashes. Model weights are cryptographically signed. No automatic updates for L0 components may occur without full re-testing.
-
-**6.3 Interface Hardening**  
-Voice and text commands cannot override L0 limits. L2/L3 changes require physical confirmation and adult biometrics.
-
-**6.4 Failure Evidence**  
-Any security event must trigger tamper-evident logging and administrator notification.
-
-**Core Invariant**: Hackers can attack software. They cannot easily override physics. 10cm/s welded + hardware Sanctuary Key beats any prompt.
-
-## ARTICLE VII: OPTIONAL BIOMIMETIC SAFETY LAYERS
-
-**Purpose**: Scalable safety inspired by human reflexes. Tier 1 is mandatory. Higher tiers are optional upgrades.
-
-| Tier | Status | Safety Layer | Requirement |
-| --- | --- | --- | --- |
-| Tier 1 | Mandatory | 10cm/s hardware cap + Limp Mode + Sanctuary Key | No unit ships without Tier 1. |
-| Tier 2 | Recommended | Contact detection | Force-sensitive resistor sensors or equivalent contact detection. |
-| Tier 3 | Advanced | Proximity skin | Near-contact detection before physical impact. |
-| Tier 4 | Research | Full artificial skin | Whole-body tactile safety layer under research validation. |
-
-**Invariant**: No unit ships without Tier 1. Higher tiers add protection based on cost and need.
-
----
-
-## Standards Alignment (Preliminary)
-
-Design is aligned with ISO 13482 (personal care robots), ISO 13485 principles (QMS), ISO/TS 15066 (contact limits), and UL 4600 safety case concepts. Formal verification is pending testing.
+**Rate Limiting & No Self-Justification**: Unique breaches reviewed. Duplicates consolidated. AI may never interpret its own actions as compliant. Edge cases default to lockdown.

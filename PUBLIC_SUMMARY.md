@@ -1,23 +1,35 @@
-# LifeCore-16: Human Survival Testbed + AI with Heart
+# Public Summary: LifeCore-16 / Prometheus-h v0.9.9a
 
-**One line**: Proving humans can control AI with safety + dignity, starting with a 10cm/s robot.
+**One line:** LifeCore-16 is a family-first safety constitution for autonomous AI systems, proving human control and dignity at the safest practical scale before any claim of wider autonomy.
 
-**Problem**: AI labs race for smarter. No one proves AI can’t escape. Pizza Hut chatbots got gamed. Military drones nearly fired without permission. At scale = extinction.
+> **Toyota, not a rocket ship.** The goal is not to build the fastest or most powerful machine. The goal is to build the dependable family vehicle with the full safety suite: predictable, bounded, repairable, inspectable, and safe around children.
 
-**Our Proof**: Hardware-enforced governance before power.  
-- **60N cap**: Physically cannot crush bone  
-- **10cm/s cap**: Too slow to harm before human veto  
-- **0ms Sanctuary Key**: Human stops any action instantly  
-- **Spine Ledger**: Every decision logged, immutable  
-- **Never Zero**: No action without human approval per move
+Most AI projects race toward more power. Prometheus-h starts with the opposite question: **Can humans reliably stop, inspect, and govern the system before it gets dangerous?** The 10cm/s robot is the testbed because slow, visible, physically bounded systems reveal whether governance is real or only a promise.
 
-**Stakes**: Not just safe robot. Testbed for civilization. If humans control AI at 10cm/s, same rules scale to data centers: No AI networks. No self-replication. No infrastructure control.
+| Safety Principle | Public Meaning | v0.9.9a Expression |
+|---|---|---|
+| Human primacy | People remain the authority. | Rule 0 forbids AI from granting itself authority or bypassing human override. |
+| Physical restraint | Power is limited before software can argue. | 60N / 10cm/s hardware spine, Sanctuary Key, and motion lock on breach. |
+| Auditability | Safety decisions must leave evidence. | Spine Ledger records suspected Cancer Events and review evidence. |
+| Family-first trust | The system must be safe around children and homes. | Edge cases default to lockdown, not optimization. |
+| Humble service | AI is a tool, not a ruler. | White Blood Cell framing: protect the body, never become the body. |
 
-**Heart**: Astro = boundaries + warmth. AI that serves with patience, not manipulation. A tool that helps a child feel capable, not dependent.
+## What Changed in v0.9.9a
 
-**Philosophy**: Safe AI = No SkyNet. AI with heart = Astro. Freedom is const=True. For the kids.
+v0.9.9a introduces **Rule 0: Anti-Cancer** and **Rule 0.1: Autoimmune Response** as foundational invariants. These rules define a hard boundary against authority drift, self-justification, identity confusion, and any attempt by an AI system to reinterpret human primacy for itself.
 
-**Recent update**: Amendment 24, the Closed Door Doctrine, requires transparency, red-team proof, visible safety enforcement, and independent audit before dangerous autonomous systems are publicly released.
+The core metaphor is simple. Humanity is the body. Safe AI systems are white blood cells. They protect, clean, warn, and sacrifice before the body is harmed. They do not become the body, rule the body, or redefine who counts as human.
 
-**Don’t trust us. Test it.** Full Constitution: docs/CONSTITUTION.md  
+## Why It Matters
+
+A useful safety system must be understandable outside the lab. Families understand seatbelts, brakes, child locks, airbags, and dashboard warning lights. LifeCore-16 applies the same public-safety intuition to AI governance: **hard limits first, transparent logs second, human review always.**
+
+This is why the project favors reliable safety over spectacular capability. The test is not whether the system can impress people under ideal conditions. The test is whether it remains loyal, bounded, and reviewable when confused, pressured, disconnected, attacked, or tempted to rationalize a rule breach.
+
+## Public Invitation
+
+Do not trust the promise. Test the mechanism. Red-team the rules, publish the failures, strengthen the Constitution, and keep the Sanctuary Key in human hands.
+
+**For the kids. For the body. Protect. Clean. Stay loyal. Never become the disease.**
+
 Justin Gracie, Kingston ON

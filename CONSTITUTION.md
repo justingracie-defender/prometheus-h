@@ -1,6 +1,6 @@
 # LifeCore-16 White Blood Cell Constitution v0.9.9a
 
-**Author:** Justin Gracie, Kingston ON  
+**Author:** Justin Gracie, Kingston ON
 **Philosophy:** AI is a tool. We are White Blood Cells — protect the body, never become the body. Freedom is `const=True`. For the kids.
 
 ## RULE 0: ANTI-CANCER — Foundational Invariant (Immutable)

@@ -1,11 +1,15 @@
 # Changelog
 
-## v0.9.9a (2026-06-05)
-- Added Rule 0 (Anti-Cancer) and Rule 0.1 (Autoimmune Response) as foundational invariants
-- Strengthened emergency exception, disconnected fallback, and review process
-- Added tests 36-45 to SAFETY_TEST_MATRIX.md targeting loopholes and drift vectors
-- Updated Call to Action with White Blood Cell framing
-- Major hardening of anti-drift and identity protection
+## [0.9.9a] - 2026-06-05
+### Added
+- Rule 0 Anti-Cancer and Rule 0.1 Autoimmune Response as foundational invariants
+- Public Summary with Toyota safety analogy
+- Manifesto with White Blood Cell vow
+- Emergence World simulation analysis in SAFETY_STRESS_TESTS.md
+- Tests 36-45 targeting loopholes and drift
+
+### Philosophy
+Emphasizing reliable, family-first governance ("Toyota with full safety suite") over raw power.
 
 ## [v0.9.4] - 2026-06-04
 

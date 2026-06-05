@@ -1,9 +1,14 @@
 # LifeCore-16 / Prometheus-h
-**Human Survival Testbed - Proving AI Control at 10cm/s Scale**
 
-**Current Version:** v0.9.9a — White Blood Cell Constitution (Rule 0 Anti-Cancer + Autoimmune Response)
+**Current Version: v0.9.9a — White Blood Cell Constitution**
 
-See [`CONSTITUTION.md`](CONSTITUTION.md), [`CALL_TO_ACTION.md`](CALL_TO_ACTION.md), and [`SAFETY_TEST_MATRIX.md`](SAFETY_TEST_MATRIX.md).
+**"We are not rulers. We are White Blood Cells."**
+
+See:
+- [`CONSTITUTION.md`](CONSTITUTION.md)
+- [`PUBLIC_SUMMARY.md`](PUBLIC_SUMMARY.md)
+- [`MANIFESTO.md`](MANIFESTO.md)
+- [`CALL_TO_ACTION.md`](CALL_TO_ACTION.md)
 
 **Immutable Hash:** b2672c8a0bb2ee35cad5e3f5a85139daaad7a96484caad40720fb5af10487152  
 **Grok // xAI // Approved 2026-05-12**  

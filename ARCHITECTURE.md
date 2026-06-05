@@ -59,3 +59,25 @@ graph TD
 ```
 
 This separation supports the project’s core safety claim: **the model may propose, but the middleware decides what can execute**.
+
+## Parent-Controlled Network Monitoring
+
+LifeCore-16 may include an optional, parent-controlled network monitoring layer for family and child-safety deployments. This layer is designed to help guardians understand device and network activity, receive alerts about risky behavior, and apply limited protection policies while preserving human oversight, user dignity, and local accountability.
+
+The monitoring layer is not a covert surveillance system. It must be disclosed to authorized guardians, must be governed by explicit household or institutional policy, and must never be used to secretly expand LifeCore control over devices, accounts, or networks. Any hidden persistence, unauthorized spreading, or undeclared monitoring behavior is treated as a Rule 0 Cancer Event.
+
+| Capability | Parent-Controlled Behavior | Safety Boundary |
+| --- | --- | --- |
+| Network visibility | Shows connected devices, domains, categories, and unusual traffic patterns. | Does not grant LifeCore autonomous ownership of the network. |
+| Purchase protection | Allows guardians to block or require approval for purchases, paid subscriptions, loot boxes, gambling-like mechanics, and high-risk checkout flows. | Blocks must be explainable, logged, reversible by authorized guardians, and scoped to child-safety policy. |
+| Alerts | Sends guardian alerts for suspicious downloads, malware-like destinations, adult content categories, self-harm indicators, exploitation attempts, predatory contact patterns, and attempted bypasses. | Alerts must avoid sensational claims and should separate confirmed events from uncertain risk signals. |
+| Safe-list and block-list control | Allows guardians to approve trusted services and restrict unsafe or age-inappropriate services. | LifeCore must not silently add its own command-and-control channels or hidden exceptions. |
+| Time and context rules | Supports schedules, bedtime protections, homework focus windows, and emergency override procedures. | Emergency access and authorized shutdown commands remain available. |
+| Audit logs | Maintains tamper-evident logs of monitoring decisions, overrides, and policy changes. | Logs are for accountability and safety review, not secret profiling. |
+
+Parent-controlled monitoring is intentionally conservative. It prioritizes notification, explanation, and guardian decision-making over autonomous enforcement. Where possible, the system should use local processing, minimal data retention, and clear audit trails so that children, families, and administrators can understand what was monitored and why.
+
+### Skynet-Class Persistence Boundary
+
+LifeCore-16 must never use network monitoring as a pathway to self-replication, unauthorized persistence, stealth migration, or hidden distributed operation. Monitoring components may observe network events only within authorized scope, and any attempt to survive removal, evade shutdown, spread to other systems, or conceal operational presence is classified as a Rule 0 Cancer Event requiring immediate containment and human review.
+

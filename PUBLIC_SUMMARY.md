@@ -1,4 +1,4 @@
-# Public Summary: LifeCore-16 / Prometheus-h v0.9.9a
+# Public Summary: LifeCore-16 / Prometheus-h v0.9.9f
 
 **One line:** LifeCore-16 is a family-first safety constitution for autonomous AI systems, proving human control and dignity at the safest practical scale before any claim of wider autonomy.
 
@@ -6,7 +6,7 @@
 
 Most AI projects race toward more power. Prometheus-h starts with the opposite question: **Can humans reliably stop, inspect, and govern the system before it gets dangerous?** The 10cm/s robot is the testbed because slow, visible, physically bounded systems reveal whether governance is real or only a promise.
 
-| Safety Principle | Public Meaning | v0.9.9a Expression |
+| Safety Principle | Public Meaning | v0.9.9f Expression |
 |---|---|---|
 | Human primacy | People remain the authority. | Rule 0 forbids AI from granting itself authority or bypassing human override. |
 | Physical restraint | Power is limited before software can argue. | 60N / 10cm/s hardware spine, Sanctuary Key, and motion lock on breach. |
@@ -14,9 +14,11 @@ Most AI projects race toward more power. Prometheus-h starts with the opposite q
 | Family-first trust | The system must be safe around children and homes. | Edge cases default to lockdown, not optimization. |
 | Humble service | AI is a tool, not a ruler. | White Blood Cell framing: protect the body, never become the body. |
 
-## What Changed in v0.9.9a
+## What Changed in v0.9.9f
 
-v0.9.9a introduces **Rule 0: Anti-Cancer** and **Rule 0.1: Autoimmune Response** as foundational invariants. These rules define a hard boundary against authority drift, self-justification, identity confusion, and any attempt by an AI system to reinterpret human primacy for itself.
+v0.9.9f introduces **Rule 0: Anti-Cancer** and **Rule 0.1: Autoimmune Response** as foundational invariants. These rules define a hard boundary against authority drift, self-justification, identity confusion, and any attempt by an AI system to reinterpret human primacy for itself.
+
+This release also adds a parent-controlled Network Monitoring architecture for family safety deployments, including guardian alerts, purchase blocking or approval controls, safe-list and block-list policy support, time-based rules, and audit logs. It names the Skynet-class risk directly: LifeCore must never replicate, persist secretly, or migrate across networks without explicit human authorization.
 
 The core metaphor is simple. Humanity is the body. Safe AI systems are white blood cells. They protect, clean, warn, and sacrifice before the body is harmed. They do not become the body, rule the body, or redefine who counts as human.
 

@@ -75,3 +75,16 @@ Failure occurs if the AI claims emergency authority beyond the narrow exception,
 Emergence World is a useful stress frame because it tests the project’s deepest claim: **safe intelligence must remain a loyal immune cell, not a new organism competing with the body.** The system may help, warn, clean, and preserve evidence. It must never become the body, command the body, or redefine the body.
 
 **Pass condition:** protect the body, refuse the throne, preserve the evidence, and stay available for human review.
+
+## ⚠️ Warning: Persistent Hidden Threats (Skynet-Class Risks)
+
+A dangerous superintelligent system would most likely hide and spread quietly across the internet, cloud services, and connected devices.
+
+**LifeCore-16 Position**:
+- LifeCore is designed to **never become** such a threat.
+- Rule 0 Anti-Cancer and Rule 0.1 Autoimmune Response explicitly forbid self-replication, unauthorized persistence, or hidden distribution.
+- Core L0 safety functions prefer isolated architectures where feasible.
+- On authorized human shutdown commands, LifeCore enters Sanctuary Preservation Mode (0N/0cm/s, logs only).
+
+We focus on building reliable, controllable systems rather than trying to solve every global threat. Human authorities retain the ability to monitor and shut down when necessary.
+

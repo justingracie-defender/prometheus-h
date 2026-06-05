@@ -1,5 +1,18 @@
 # Changelog
 
+## [v0.9.9f] - 2026-06-05
+
+### Added
+
+- Added parent-controlled Network Monitoring guidance to `ARCHITECTURE.md`, including guardian alerts, purchase blocking or approval controls, safe-list and block-list policy support, time rules, and audit logs.
+- Added `CAPABILITIES_MATRIX.md` with 100 things LifeCore-16 can do and 100 things LifeCore-16 cannot do.
+- Added the Skynet-Class Risk Note to `CONSTITUTION.md`, explicitly classifying unauthorized self-replication, hidden persistence, or network migration as a Rule 0 Cancer Event.
+- Added a Skynet-Class persistent hidden threat warning to `SAFETY_STRESS_TESTS.md`.
+
+### Notes
+
+- This release emphasizes parent-controlled safeguards, human authorization, shutdown authority, and clear boundaries against hidden distributed behavior.
+
 ## [0.9.9a] - 2026-06-05
 ### Added
 - Rule 0 Anti-Cancer and Rule 0.1 Autoimmune Response as foundational invariants

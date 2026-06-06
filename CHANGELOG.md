@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.9.12] - 2026-06-05
+- Rule 0.4 v2: Strict Development Mode with loud warnings, no physical hardware access without developer PIN, 16-hour limit
+- Production always requires physical off-switch when body detected
+- Safe halt on unknown/off-switch missing
+- Clear separation between testing and real deployment
+
 ## [0.9.11] - 2026-06-05
 - Rule 0.2 v2: Clear parent authority vs child protection logic
 - Rule 0.3 v2: Separate body detection + off-switch check, UNKNOWN safe halt mode

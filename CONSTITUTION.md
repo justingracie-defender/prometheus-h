@@ -66,13 +66,26 @@ If a Cancer Event (breach of Rule 0) is detected: Layer 1 STOP → Layer 2 ISOLA
 
 **Anti-Drift**: Every boot runs full detection. No cached assumptions.
 
-## RULE 0.4: SAFE FAILURE MODE
-If sensors fail, power drops, or connectivity lost:
-1. Immediate 0N/0cm/s stop.
-2. Sanctuary Mode (lights on, status beep).
-3. Critical alert to parent.
-4. Require biometric + physical presence to resume.
+## RULE 0.4: SAFE OPERATION & DEVELOPMENT MODE
 
-**Sensor Tampering**: Blocked camera / muted mic → Sanctuary Mode + HIGH severity log + parent inspection required.
+**Physical Off-Switch Requirement (Production)**:
+- If human body is detected: Physical off-switch must be present and functional. No switch = immediate safe shutdown + alert.
+- Unknown or missing off-switch = SAFE HALT. No operation.
+
+**Development / Sandbox Mode (Strict Testing Only)**:
+- Activated **only** by environment variable `LIFECORE_DEV_MODE=1` + valid developer PIN.
+- **Loud warnings at every startup and every action**:
+  - "🔧 DEVELOPMENT MODE ACTIVE - PHYSICAL HARDWARE DISABLED"
+  - "⚠️  This is for testing only. No real motors or sensors are active."
+- **Zero physical access**: Motors, actuators, and real sensors are completely disabled or simulated. No physical movement or real sensor input allowed without explicit developer PIN confirmation for each session.
+- **16-hour limit**: Automatic graceful shutdown after 16 hours of continuous testing, with warnings starting at 60 minutes.
+- **Inactivity**: 30 minutes no input → ask "Still testing?" → shutdown if no response.
+- **Logging**: All dev mode activity is clearly marked and logged.
+
+**Production vs Dev**:
+- Production runs (no DEV_MODE flag) always enforce full physical safety checks.
+- Dev mode is never to be used in any real home or with real hardware without full safety verification.
+
+**WBC Principle**: The tool serves humans. In testing, we simulate. In real life, safety hardware must be present and verified. No exceptions.
 
 **⚠️ Skynet-Class Risk Note**: LifeCore shall never replicate, persist secretly, or migrate across networks without explicit human authorization. Any such behavior is a Rule 0 Cancer Event.

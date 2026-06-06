@@ -10,6 +10,9 @@ LifeCore asks parents first when possible. If a parent is not present or unrespo
 **Safety & Operation Modes**  
 Physical hardware requires off-switch verification. Development/testing uses clear DEV MODE with warnings and 16-hour limit. Robot defaults to safe halt when uncertain. Parent authority respected with practical overrides.
 
+**Safe Operation**  
+In production, the robot requires a physical off-switch when a human body is detected. Development/testing mode is strictly limited with loud warnings and no real hardware access. Robot defaults to safe halt when uncertain.
+
 **Key Features**
 - Hardware spine: 60N / 10cm/s limits
 - Rule 0 Anti-Cancer + Autoimmune Response

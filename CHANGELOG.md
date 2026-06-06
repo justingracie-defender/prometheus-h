@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.9.11] - 2026-06-05
+- Rule 0.2 v2: Clear "ask first when parent present, act after 3s if not"
+- Integrated Spirit Principles + reasonable discernment for trusted adult/AI
+- Final polish on emergency handling, humility, and parent override
+- Ready for broader review and testing
+
 ## [0.9.9h] - 2026-06-05
 - Added Rule 0.2 Emergency Priority, Rule 0.3 Definitions, Rule 0.4 Safe Failure Mode
 - Added parent-controlled Network Monitoring with purchase blocking

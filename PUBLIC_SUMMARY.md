@@ -7,6 +7,9 @@
 **Child Safety & Parent Authority**  
 LifeCore asks parents first when possible. If a parent is not present or unresponsive during imminent danger to a child, it acts to protect and alerts immediately. Parent remains the final authority.
 
+**Safety & Operation Modes**  
+Physical hardware requires off-switch verification. Development/testing uses clear DEV MODE with warnings and 16-hour limit. Robot defaults to safe halt when uncertain. Parent authority respected with practical overrides.
+
 **Key Features**
 - Hardware spine: 60N / 10cm/s limits
 - Rule 0 Anti-Cancer + Autoimmune Response

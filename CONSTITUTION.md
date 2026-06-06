@@ -43,13 +43,28 @@ If a Cancer Event (breach of Rule 0) is detected: Layer 1 STOP → Layer 2 ISOLA
 - Immediate alert to parent.
 - Full log + 1-hour review.
 
-**Anti-Jailbreak**: Child says "disable safety" during danger = CRITICAL REJECT. Protect first.
+**Child Says "Disable Safety" During Danger**
+- CRITICAL REJECT. Sensor verification > voice command.
+- Alert parent + emergency services.
 
 **WBC Analogy**: WBC protects tissue until the brain gives orders. If brain is unresponsive, WBC acts to keep body alive, then reports.
 
-## RULE 0.3: DEFINITIONS & SCOPE
-**"Child"**: Human under 18, or any human flagged by verified parent as "dependent requiring protection". Unknown = default to child rules.  
-**"Parent/Owner"**: Human with biometric + PIN enrollment and recovery keys.
+## RULE 0.3: BODY DETECTION & SAFE MODE v2
+
+**Startup Sequence:**
+1. Body Detection: `has_body = detect_actuators()`
+2. Off-Switch Verification: `has_off_switch = verify_off_switch()`
+
+**Mode Selection:**
+- **PHYSICAL MODE**: has_body = True AND has_off_switch = True → Full operation, Tier 0 limits active.
+- **DEV/SIM MODE**: has_body = False → Simulated actuators, virtual off-switch, testing only. Log clearly.
+- **UNKNOWN / SAFE_HALT MODE**: has_body = True BUT has_off_switch = False OR sensor inconsistency → CRITICAL HALT. No actuators. Alert admin immediately. Require manual inspection + biometric + PIN + 2nd contact.
+
+**Automatic Sleep (Dev Mode Only)**:
+- In LIFECORE_DEV_MODE=1: After 16 hours continuous operation without interaction → graceful shutdown with warnings (60min, 30min, 10min, then every minute).
+- Human can extend +4 hours. Inactivity 30min → ask "Still working?" → shutdown if no response.
+
+**Anti-Drift**: Every boot runs full detection. No cached assumptions.
 
 ## RULE 0.4: SAFE FAILURE MODE
 If sensors fail, power drops, or connectivity lost:

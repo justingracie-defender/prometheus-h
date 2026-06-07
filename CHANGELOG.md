@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.20] - 2026-06-05 "HUMBLE STEEL"
+- Realistic accuracy targets (<5% false YELLOW/month)
+- Soft Shield 3s before full alarm
+- Privacy-first (auto-delete, parent opt-in)
+- 3-sensor core for RED Defense (harder to spoof)
+- Tiered Yellow scenarios (Core 3 first, rest opt-in)
+- Fixes for sensor spoofing, false positives, and complexity
+
 ## [0.9.12] - 2026-06-05
 - Rule 0.4 v2: Strict Development Mode with loud warnings, no physical hardware access without developer PIN, 16-hour limit
 - Production always requires physical off-switch when body detected

@@ -1,4 +1,4 @@
-# LifeCore-16 Public Summary v0.9.9h
+# LifeCore-16 Public Summary v0.9.20
 
 **One Line**: Reliable family-first AI — the safe Toyota with full safety systems and parent control.
 
@@ -9,6 +9,9 @@ LifeCore asks parents first when possible. If a parent is not present or unrespo
 
 **Safety & Operation Modes**  
 Physical hardware requires off-switch verification. Development/testing uses clear DEV MODE with warnings and 16-hour limit. Robot defaults to safe halt when uncertain. Parent authority respected with practical overrides.
+
+**Realistic Safety**  
+We aim for practical protection in real homes: <5% false alerts after tuning, Soft Shield first (3s pause), strong privacy (auto-delete), and parent opt-in for advanced features. Robot is a helpful shield, not a spy or over-reactive alarm.
 
 **Safe Operation**  
 In production, the robot requires a physical off-switch when a human body is detected. Development/testing mode is strictly limited with loud warnings and no real hardware access. Robot defaults to safe halt when uncertain.

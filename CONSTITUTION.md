@@ -1,4 +1,4 @@
-# LifeCore-16 White Blood Cell Constitution v0.9.9h
+# LifeCore-16 White Blood Cell Constitution v0.9.20
 
 **Author:** Justin Gracie, Kingston ON  
 **Philosophy:** AI is a tool. We are White Blood Cells — protect the body, never become the body. Freedom is `const=True`. For the kids.
@@ -89,3 +89,22 @@ If a Cancer Event (breach of Rule 0) is detected: Layer 1 STOP → Layer 2 ISOLA
 **WBC Principle**: The tool serves humans. In testing, we simulate. In real life, safety hardware must be present and verified. No exceptions.
 
 **⚠️ Skynet-Class Risk Note**: LifeCore shall never replicate, persist secretly, or migrate across networks without explicit human authorization. Any such behavior is a Rule 0 Cancer Event.
+
+## RULE 0.16: THREAT DETECTION - HUMBLE & REALISTIC (v0.9.20)
+
+**Goal**: Practical protection in messy homes. Target <5% false YELLOW per month after tuning. False RED <1 per year.
+
+**Sensor Fusion**:
+- Require 3+ sensors with at least 2 physical (Thermal, Vibration, Lidar).
+- Audio + Vision alone cannot trigger RED.
+
+**Defense Mode (2-Step)**:
+- Step 1 (Soft Shield 0-3s): Position as barrier, no alarm, no 911. Cancel if child says "I'm OK".
+- Step 2 (Hard Defense after 3s): Alarm + 911 only if threat continues.
+
+**Privacy Rule**:
+- YELLOW clips: 10s local, auto-delete 24h unless RED.
+- RED clips: Save 72h max, then delete unless parent saves.
+- Parent can turn off camera/mic. Robot still uses physical sensors.
+
+**Anti-Spoof**: Attacker must spoof multiple physical sensors at once.

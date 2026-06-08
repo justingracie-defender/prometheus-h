@@ -1,15 +1,10 @@
 # Changelog
 
-## [0.9.12] - 2026-06-05
-- Rule 0.0 Authority Pyramid with clear levels
-- Added Child "Stop" + New Request Handling (respectful pause + reasonable compromise with parent tasks)
+## [0.9.12 / v1.2] - 2026-06-05
+- Authority Pyramid with clear levels
+- Child "Stop" + New Request Handling (respectful pause + reasonable compromise)
+- Refined README with attention + steel
 - Trusted Adult level for family helpers
-- Refined communication for real family dynamics
-
-## [1.2] - 2026-06-05
-- Refined README with attention-grabbing hooks, 3 Promises, badges, and steel visibility
-- Updated marketing tone while keeping core protections (Skynet Lock, parent control, gentle limits)
-- Added keywords and discoverability improvements
 
 ## [0.9.20] - 2026-06-05 "HUMBLE STEEL"
 - Realistic accuracy targets (<5% false YELLOW/month)

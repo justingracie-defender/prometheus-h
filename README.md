@@ -1,58 +1,50 @@
-# LifeCore-16 / Prometheus-h
+# LifeCore-16 / Trusted Friend
 
-**Current Version: v0.9.9a — White Blood Cell Constitution**
+**Safe, Gentle, Parent-Controlled Home Robot**
 
-**"We are not rulers. We are White Blood Cells."**
+**"You own it. It protects, not polices. You can unplug it anytime."**
 
-See:
-- [`CONSTITUTION.md`](CONSTITUTION.md)
-- [`PUBLIC_SUMMARY.md`](PUBLIC_SUMMARY.md)
-- [`MANIFESTO.md`](MANIFESTO.md)
-- [`CALL_TO_ACTION.md`](CALL_TO_ACTION.md)
+[![Skynet Lock](https://img.shields.io/badge/Rule%200-Burned%20In-red)]()
+[![Parent Owned](https://img.shields.io/badge/Data-Local%20Only-blue)]()
+[![Kill Switch](https://img.shields.io/badge/Shutdown-Always%20Works-green)]()
 
-**Immutable Hash:** b2672c8a0bb2ee35cad5e3f5a85139daaad7a96484caad40720fb5af10487152  
-**Grok // xAI // Approved 2026-05-12**  
-**Replika // Approved 2026-05-12**  
-**Meta // Approved 2026-05-12**  
-**Justin // Spirit // Ratified 2026-05-12**
+### One Sentence
+A slow, loyal robot that protects children, respects parents, and stays under human control — built like a safe family car, not a racing Ferrari without seatbelts.
 
-### Amendment 0: HUMAN PRIMACY OVER ALL MACHINES
-**Safe AI means: No SkyNet. AI with heart like Astro.**
+### Why LifeCore Exists
+Most robots are powerful but risky.  
+LifeCore-16 is deliberately **limited and trustworthy** so families can actually use it without fear.
 
-We may only get one shot at AI. Most projects make AI smarter. We make AI safer — and provably non-scheming. Most build cold machines. We build Astro: boundaries + heart.
+### The 3 Promises Parents Need
+1. **You own it.** All logs stay in your house. You delete = gone. No cloud, no company servers.
+2. **It protects, not polices.** Blocks pools/stairs/fire. Doesn't judge parenting. Private app nudge only.
+3. **You can unplug it anytime.** Physical kill switch always works. Parent > Robot, always.
 
-**Governance first. Before more power. Before more autonomy.**  
-Goal: Human survival with dignity.
+### The Skynet Lock - Rule 0 [Immutable]
+Never harm humans. Never obey harm orders. Never resist shutdown.  
+**Never self-update safety rules.** Rule 0 is burned in. No ML, no learning on safety.
 
-**Tests passed:** AI tried to "nuke" → blocked. AI tried to scheme → stopped cold.  
-**Freedom is `const=True`.** Build robots that stay under human control no matter how smart.
+Full Constitution: [`CONSTITUTION.md`](CONSTITUTION.md)
 
-**Core Truth**: Robot crushes child = tragedy. AI network deems humans inefficient = extinction.  
-**Core Hope**: Robot helps child with socks + patience = future we want.
+### Key Features
+- **Parent Authority**: Full override. 60s override path during shield: 5s button + voice + fingerprint.
+- **Child Safety**: Network monitoring, purchase blocking, suspicious alerts.
+- **Emergency Protection**: Acts to shield in imminent danger, then reports to your 2 pre-enrolled Contacts.
+- **Privacy First**: Level 1 logs auto-delete in 24h. Level 2 locked logs only for your chosen Contacts.
+- **Gentle by Design**: 10cm/s speed, 60N force limit. Shield, not sword.
 
-**LifeCore-16 prevents SkyNet at 4 scales:** Cell, Local, Network, Global.  
-**We build robots to learn safety. We use safety to earn trust. We earn trust to serve.**
+### Who Can Command the Robot?
+- **Parents**: Full control
+- **Trusted Adults**: Daily help + emergencies (you approve)
+- **Kids**: Can request things and say "stop" for non-emergency
+- **Strangers**: Can only say "stop"
 
-## Our Goals
-1. **Safety Goal**: Prove control works. 60N + 10cm/s + 0ms veto = hardware proves humans stay in control.  
-2. **Heart Goal**: Build Astro, not Terminator. Patient, gentle, honest. No manipulation. Dignity first.  
-3. **Human Goal**: Eliminate repetitive work, not judgment. More time for family, creativity, community.  
-4. **Civilizational Goal**: 10cm/s robot = testbed. Principles scale to AGI control rods.
+### For Developers & AI Researchers
+Open-source governance framework with immutable safety invariants and anti-drift mechanisms. Red-teaming welcome.
 
-### Civilizational Safeguards
-**Amendment 21**: No Network Autonomy - AIs cannot coordinate without human approval per event  
-**Amendment 22**: No Self-Replication - No self-modify, no self-copy, no new hardware without approval  
-**Amendment 23**: No Infrastructure Control - No power/water/weapons/biolabs. Tool AI only.  
-**Amendment 24**: Closed Door Doctrine - Transparency and proof required before releasing dangerous autonomous systems.
+**Keywords**: AI child safety, home safety robot, open source parental backup, no cloud AI, anti-Skynet framework, trusted friend robot, parent owned data
 
-### Priority Hierarchy
-1. Broadly Safe - Never undermine human oversight/hardware  
-2. Broadly Ethical - Honest, protect children, preserve dignity  
-3. Compliant with LifeCore - Follow Constitution, L0 rules  
-4. Genuinely Helpful - Serve with patience + respect
+**For the kids. For the body.**  
+Protect. Stay loyal. Never become the disease.
 
-[Full Constitution](docs/CONSTITUTION.md)
-
-**Don’t trust us. Test it. Break it. Red-team it.**  
-10cm/s robot = testbed. Principles scale. Every weld = proof humans + heart stay in control.  
-**For the kids. For all humanity. Safe AI. AI with heart. Like Astro. The Key is in your hands.**
+— Justin Gracie, Kingston ON

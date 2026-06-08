@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2] - 2026-06-05
+- Refined README with attention-grabbing hooks, 3 Promises, badges, and steel visibility
+- Updated marketing tone while keeping core protections (Skynet Lock, parent control, gentle limits)
+- Added keywords and discoverability improvements
+
 ## [0.9.20] - 2026-06-05 "HUMBLE STEEL"
 - Realistic accuracy targets (<5% false YELLOW/month)
 - Soft Shield 3s before full alarm

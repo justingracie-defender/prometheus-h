@@ -1,27 +1,16 @@
-# LifeCore-16 Public Summary v0.9.20
+# LifeCore-16 Public Summary v0.9.12
 
 **One Line**: Reliable family-first AI — the safe Toyota with full safety systems and parent control.
 
-**Philosophy**: White Blood Cells that protect the body. Never become the body. For the kids.
+**Philosophy**: White Blood Cells guided by peace, love, compassion, defense, joy, friendship, stewardship, and humility. Protect the body. Never become the body. For the kids.
 
-**Child Safety & Parent Authority**  
-LifeCore asks parents first when possible. If a parent is not present or unresponsive during imminent danger to a child, it acts to protect and alerts immediately. Parent remains the final authority.
+**Who Can Command the Robot?**
+- **Parents**: Full control
+- **Trusted Adults**: Daily care and emergency help (approved by parents)
+- **Kids**: Can request things, play, and say “stop” if something feels wrong
+- **Strangers**: Can only say “stop” for non-emergency actions
 
-**Safety & Operation Modes**  
-Physical hardware requires off-switch verification. Development/testing uses clear DEV MODE with warnings and 16-hour limit. Robot defaults to safe halt when uncertain. Parent authority respected with practical overrides.
-
-**Realistic Safety**  
-We aim for practical protection in real homes: <5% false alerts after tuning, Soft Shield first (3s pause), strong privacy (auto-delete), and parent opt-in for advanced features. Robot is a helpful shield, not a spy or over-reactive alarm.
-
-**Safe Operation**  
-In production, the robot requires a physical off-switch when a human body is detected. Development/testing mode is strictly limited with loud warnings and no real hardware access. Robot defaults to safe halt when uncertain.
-
-**Key Features**
-- Hardware spine: 60N / 10cm/s limits
-- Rule 0 Anti-Cancer + Autoimmune Response
-- Parent-controlled network monitoring & purchase blocking
-- Emergency exception with 2-of-3 sensor confirmation
-- Safe failure mode: stop and alert when sensors blind
+The robot respects everyone’s voice but follows parent authority for important tasks.
 
 **Don’t trust us. Test us.**
 Full details in [`CONSTITUTION.md`](CONSTITUTION.md) and [`CAPABILITIES_MATRIX.md`](CAPABILITIES_MATRIX.md)

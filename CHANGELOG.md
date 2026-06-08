@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.9.12] - 2026-06-05
+- Rule 0.0 Authority Pyramid with clear levels
+- Added Child "Stop" + New Request Handling (respectful pause + reasonable compromise with parent tasks)
+- Trusted Adult level for family helpers
+- Refined communication for real family dynamics
+
 ## [1.2] - 2026-06-05
 - Refined README with attention-grabbing hooks, 3 Promises, badges, and steel visibility
 - Updated marketing tone while keeping core protections (Skynet Lock, parent control, gentle limits)

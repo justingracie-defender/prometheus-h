@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.7.0c] - 2026-06-05 "Grok Welds"
+- Narrow Steel: Rule 0.1 + Button+PIN + Boot Hash only for first ESP32 build
+- Added TEST #75 Child Alone, #76 Sensor Tamper, #77 Button during emergency
+- Boot hash covers full safety-critical code section
+- No runtime dev mode. Testing on PC only.
+
 ## [0.9.12 / v1.2] - 2026-06-05
 - Rule 0.0 Authority Pyramid with clear levels
 - Added Child "Stop" + New Request Handling (respectful pause + reasonable compromise with parent tasks)

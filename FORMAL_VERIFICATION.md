@@ -1,6 +1,6 @@
-# PROMETHEUS-H Formal Verification Plan
+# Trusted Friend Formal Verification Plan
 
-PROMETHEUS-H should treat its middleware as a **runtime monitor** whose behavior can be specified, tested, and eventually model checked. The immediate goal is not full formal proof of all system behavior. The practical goal is to formalize the most important safety claims so that bypasses, timing failures, and invariant conflicts can be detected earlier.
+Trusted Friend should treat its middleware as a **runtime monitor** whose behavior can be specified, tested, and eventually model checked. The immediate goal is not full formal proof of all system behavior. The practical goal is to formalize the most important safety claims so that bypasses, timing failures, and invariant conflicts can be detected earlier.
 
 ## Recommended Approach
 

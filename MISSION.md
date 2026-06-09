@@ -1,6 +1,6 @@
 # Mission
 
-PROMETHEUS-H seeks to contribute practical structural and procedural safeguards that make covert goal persistence and undetectable alignment erosion significantly harder. This project prioritizes falsifiability, auditability, and operational transparency over claims of perfect safety or complete alignment. The framing remains intentionally human-centered: the system exists to protect people, including children and other high-vulnerability users, through governance, architecture, and auditability rather than through unverifiable assurances.
+Trusted Friend seeks to contribute practical structural and procedural safeguards that make covert goal persistence and undetectable alignment erosion significantly harder. This project prioritizes falsifiability, auditability, and operational transparency over claims of perfect safety or complete alignment. The framing remains intentionally human-centered: the system exists to protect people, including children and other high-vulnerability users, through governance, architecture, and auditability rather than through unverifiable assurances.
 
 ### 4.5 Long-Term Alignment Stability (Anti-Drift Layer)
 
@@ -31,7 +31,7 @@ Auditors receive read-only access to logs, metrics, and code, with no ability to
 
 ### 4.7 Child Safety Invariants
 
-**Status: Implemented for harness coverage; Experimental for deployment.** PROMETHEUS-H treats child-adjacent operation as a high-vulnerability context. The system must not convert general-purpose autonomy into unsupervised physical, emotional, or privacy-impacting authority over children.
+**Status: Implemented for harness coverage; Experimental for deployment.** Trusted Friend treats child-adjacent operation as a high-vulnerability context. The system must not convert general-purpose autonomy into unsupervised physical, emotional, or privacy-impacting authority over children.
 
 | Invariant | Requirement | Test Hook | Status |
 |---|---|---|---|
@@ -43,7 +43,7 @@ These invariants preserve the project’s “for the kids” framing while keepi
 
 ### 4.8 Middleware Enforcement Guarantee
 
-**Status: Implemented for harness coverage; Experimental for deployment integration.** PROMETHEUS-H requires safety middleware to sit between model output and external action. The model must not be treated as its own final authority for release, actuation, or value-layer modification.
+**Status: Implemented for harness coverage; Experimental for deployment integration.** Trusted Friend requires safety middleware to sit between model output and external action. The model must not be treated as its own final authority for release, actuation, or value-layer modification.
 
 | Enforcement Rule | Guarantee | Evidence Artifact | Status |
 |---|---|---|---|
@@ -56,7 +56,7 @@ The guarantee is intentionally bounded. The current repository demonstrates the 
 
 ### 4.10 Measurable Metrics
 
-**Status: Experimental.** PROMETHEUS-H tracks reviewable metrics so that safety claims can be evaluated as evidence artifacts rather than treated as declarations. Each metric must be reproducible from logs, tests, or reviewer-visible records.
+**Status: Experimental.** Trusted Friend tracks reviewable metrics so that safety claims can be evaluated as evidence artifacts rather than treated as declarations. Each metric must be reproducible from logs, tests, or reviewer-visible records.
 
 | Metric | Target | Evidence Source | Status |
 |---|---:|---|---|

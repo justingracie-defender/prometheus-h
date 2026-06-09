@@ -1,1 +1,1 @@
-f06cf71c0094d0689ac0b8b32caf3809182a6ef06a5e613b95581dbae6c57747  PROMETHEUS-H_v0.4.1_StandardsAlignment_Magnus.md
+6c54aa8a0f8986ff89c31d0423876c2f513200f850b155d858d9dd8d8ebb7c59  TRUSTED-FRIEND_v0.4.1_StandardsAlignment_Magnus.md

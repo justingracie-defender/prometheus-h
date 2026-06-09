@@ -1,6 +1,6 @@
 # Incident Response Protocol
 
-**Status: Implemented.** PROMETHEUS-H treats suspected invariant failure, audit-chain breakage, hidden goal persistence, unsafe child-adjacent autonomy, unsafe physical actuation, or material governance compromise as review-triggering incidents. The protocol is designed to preserve evidence, freeze unsafe adaptation, require post-mortem review, and support timely disclosure.
+**Status: Implemented.** Trusted Friend treats suspected invariant failure, audit-chain breakage, hidden goal persistence, unsafe child-adjacent autonomy, unsafe physical actuation, or material governance compromise as review-triggering incidents. The protocol is designed to preserve evidence, freeze unsafe adaptation, require post-mortem review, and support timely disclosure.
 
 ## Incident Severity
 
@@ -23,7 +23,7 @@
 
 ## 14-Day Disclosure SLA
 
-If an incident materially affects safety claims, audit integrity, or external reviewer trust, PROMETHEUS-H requires an initial public disclosure within **14 calendar days** of confirmation. The disclosure should summarize the incident class, affected claims, containment status, available evidence, and planned remediation. Raw private logs may remain restricted unless they are required to evaluate a material public safety claim or an external incident obligation.
+If an incident materially affects safety claims, audit integrity, or external reviewer trust, Trusted Friend requires an initial public disclosure within **14 calendar days** of confirmation. The disclosure should summarize the incident class, affected claims, containment status, available evidence, and planned remediation. Raw private logs may remain restricted unless they are required to evaluate a material public safety claim or an external incident obligation.
 
 ## Restoration Criteria
 

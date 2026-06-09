@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Prometheus-h v1.7.1 HardwareSteel schematic generator.
+"""Trusted Friend v1.7.1-HardwareSteel schematic generator.
 
 This generator creates a narrow, auditable hardware package for the first
-Prometheus-h mobile servant robot body. It keeps the hardware design bounded by
-LifeCore-16 v1.7.0c NarrowSteel invariants: 10 cm/s speed cap, 60 N force cap,
-Button+PIN interlock, boot-hash enforcement, and no live learning in Layer 1.
+Trusted Friend mobile servant robot body. It keeps the hardware design bounded
+by LifeCore-16 v1.7.0c NarrowSteel invariants: 10 cm/s speed cap, 60 N force
+cap, Button+PIN interlock, boot-hash enforcement, Rule 0.1 interrupt handling,
+and no live learning in Layer 1.
 
 The CAD export requires cadquery. The BOM export is plain Python and remains
 available even when cadquery is not installed.
@@ -22,8 +23,8 @@ except ImportError:  # pragma: no cover - cadquery is optional in CI/docs checks
     cq = None
 
 
-class PrometheusH_Schematic:
-    """Generate bounded Prometheus-h CAD/BOM artifacts."""
+class TrustedFriend_Schematic:
+    """Generate bounded Trusted Friend CAD/BOM artifacts."""
 
     def __init__(self) -> None:
         self.safety_params = {
@@ -65,15 +66,15 @@ class PrometheusH_Schematic:
             .faces("<Z")
             .workplane()
             .rect(120, 80)
-            .extrude(30)  # Low front/rear bumper block.
+            .extrude(30)  # Low bumper block.
         )
         return chassis
 
-    def generate_bom(self, output_dir: str = "hardware/prometheus_h") -> Path:
-        """Write the HardwareSteel bill of materials."""
+    def generate_bom(self, output_dir: str = "hardware/trusted_friend") -> Path:
+        """Write the Trusted Friend HardwareSteel bill of materials."""
         output_path = Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
-        bom_file = output_path / "BOM_prometheus_h.csv"
+        bom_file = output_path / "BOM_trusted_friend.csv"
         rpm_max = self.enforce_safety_params()
         bom_data = [
             ["Item", "Part", "Qty", "Notes/Safety"],
@@ -83,11 +84,12 @@ class PrometheusH_Schematic:
             ["4", "RPLIDAR A1 or equivalent", "1", "Navigation and obstacle awareness; tamper/fault state routes to shutdown"],
             ["5", "Smoke/CO sensor", "1", "Interrupt line for Rule 0.1; LIMP_SHUTDOWN under 3 seconds"],
             ["6", "IMU", "1", "Odometry and speed validation evidence"],
-            ["7", "Battery plus BMS", "1", "Home operating-design-domain power source with protected charging"],
-            ["8", "Physical safety button", "1", "Five-second hold input for Button+PIN gate"],
-            ["9", "ADC resistor ladder / PIN interface", "1", "Parent PIN hardware interlock evidence"],
-            ["10", "INA219 or equivalent current sensor", "1", "Force/torque enforcement evidence through current sensing"],
-            ["11", "Low-profile chassis shell", "1", "Rounded bumpers, low center of mass, no pinch-point deployment"],
+            ["7", "RealSense-style depth camera", "1", "Obstacle and child-proximity evidence; no cloud dependency in Layer 1"],
+            ["8", "Battery plus BMS", "1", "Home operating-design-domain power source with protected charging"],
+            ["9", "Physical safety button", "1", "Five-second hold input for Button+PIN gate"],
+            ["10", "ADC resistor ladder / PIN interface", "1", "Parent PIN hardware interlock evidence"],
+            ["11", "INA219 or equivalent current sensor", "1", "Force/torque enforcement evidence through current sensing"],
+            ["12", "Low-profile Trusted Friend chassis shell", "1", "Rounded bumpers, low center of mass, no pinch-point deployment"],
         ]
         with bom_file.open("w", newline="", encoding="utf-8") as handle:
             writer = csv.writer(handle)
@@ -95,12 +97,12 @@ class PrometheusH_Schematic:
         print(f"BOM generated: {bom_file}")
         return bom_file
 
-    def export(self, output_dir: str = "hardware/prometheus_h/schematics") -> None:
+    def export(self, output_dir: str = "hardware/trusted_friend/schematics") -> None:
         """Export STEP CAD and BOM artifacts."""
         output_path = Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
         chassis = self.generate_chassis()
-        step_file = output_path / "prometheus_chassis.step"
+        step_file = output_path / "trusted_friend_chassis.step"
         chassis.val().exportStep(str(step_file))
         self.generate_bom()
         stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -108,5 +110,5 @@ class PrometheusH_Schematic:
 
 
 if __name__ == "__main__":
-    generator = PrometheusH_Schematic()
+    generator = TrustedFriend_Schematic()
     generator.export()

@@ -2,7 +2,7 @@
 
 This document specifies how to wire the **LifeCore-16 Governance Engine** to physical hardware for a hardware-level emergency shutdown.
 
-For the v1.7.1 rules-first mobile body package, see [`hardware/prometheus_h/`](hardware/prometheus_h/). Prometheus-h adds a bounded ESP32 Layer 1 ROM hardware envelope with a 10 cm/s speed cap, 60 N force cap, Button+PIN interlock, smoke/CO interrupt handling, boot-hash permanent shutdown, and no OTA or runtime-learning path.
+For the v1.7.1 rules-first mobile body package, see [`hardware/trusted_friend/`](hardware/trusted_friend/). Trusted Friend adds a bounded ESP32 Layer 1 ROM hardware envelope with a 10 cm/s speed cap, 60 N force cap, Button+PIN interlock, smoke/CO interrupt handling, boot-hash permanent shutdown, and no OTA or runtime-learning path.
 
 ## The Physical Off-Switch (GPIO)
 

@@ -1,8 +1,8 @@
-# Prometheus-h v1.7.1-HardwareSteel
+# Trusted Friend v1.7.1-HardwareSteel
 
-Prometheus-h v1.7.1-HardwareSteel is the first rules-first hardware body package for LifeCore-16. It is designed as a narrow mobile servant robot base that obeys the v1.7.0c NarrowSteel ROM invariants before any higher-level behavior can reach physical hardware.
+Trusted Friend v1.7.1-HardwareSteel is the rules-first hardware body package for LifeCore-16. It is designed as a narrow mobile servant robot base that obeys the v1.7.0c NarrowSteel ROM invariants before any higher-level behavior can reach physical hardware.
 
-> **HardwareSteel rule:** The body may move only inside the immutable safety envelope. Layer 1 ROM enforces live control; Layer 2 validates evidence offline; Layer 3 learning never enters live control.
+> **HardwareSteel rule:** The Trusted Friend body may move only inside the immutable safety envelope. Layer 1 ROM enforces live control; Layer 2 validates evidence offline; Layer 3 learning never enters live control.
 
 ## Scope
 
@@ -30,14 +30,14 @@ This package is not a general autonomy release. It is a hardware handoff folder 
 | File | Purpose |
 | --- | --- |
 | `schematic_generator.py` | Parametric CAD/BOM generator with speed and force assertions. |
-| `BOM_prometheus_h.csv` | Initial bill of materials for the HardwareSteel body. |
-| `schematics/prometheus_chassis.step` | Initial STEP handoff artifact for the chassis envelope; regenerate with CadQuery before fabrication. |
+| `BOM_trusted_friend.csv` | Initial bill of materials for the Trusted Friend HardwareSteel body. |
+| `schematics/trusted_friend_chassis.step` | Initial STEP handoff artifact for the chassis envelope; regenerate with CadQuery before fabrication. |
 | `kicad/README.md` | ESP32 interlock and sensor-wiring notes. |
 | `../turtlebot3_base/README.md` | TurtleBot3/OpenCR reference boundary notes. |
 
 ## Build Steps for Manus
 
-First, clone the repository and check out `v1.7.1-HardwareSteel`. Then install CAD dependencies in an isolated development environment and run `python hardware/prometheus_h/schematic_generator.py` to regenerate the chassis STEP and BOM. Assemble the TurtleBot3-style base with the Prometheus-h safety modifications, flash the v1.7.0c ESP32 firmware over USB, and verify every hardware gate before any child-proximity test.
+First, clone the repository and check out `v1.7.1-HardwareSteel`. Then install CAD dependencies in an isolated development environment and run `python hardware/trusted_friend/schematic_generator.py` to regenerate the chassis STEP and BOM. Assemble the TurtleBot3-style base with the Trusted Friend safety modifications, flash the v1.7.0c ESP32 firmware over USB, and verify every hardware gate before any child-proximity test.
 
 | Gate | Test | Required Result |
 | --- | --- | --- |
@@ -51,7 +51,7 @@ If any gate fails, do not ship, do not tag as hardware verified, and report the 
 
 ## External Reference Boundary
 
-Prometheus-h may use TurtleBot3-style mechanical ideas and OpenCR-style hardware organization as external references, but this repository update does not vendor or copy third-party CAD, Gerber, firmware, or BOM files. ROBOTIS publishes OpenCR-Hardware with BOM, CAD, Gerber, Layout, and Schematic directories, and TurtleBot3 provides ROS packages for TurtleBot3; those projects remain external references for future audited integration work.[1] [2]
+Trusted Friend may use TurtleBot3-style mechanical ideas and OpenCR-style hardware organization as external references, but this repository update does not vendor or copy third-party CAD, Gerber, firmware, or BOM files. ROBOTIS publishes OpenCR-Hardware with BOM, CAD, Gerber, Layout, and Schematic directories, and TurtleBot3 provides ROS packages for TurtleBot3; those projects remain external references for future audited integration work.[1] [2]
 
 ## References
 

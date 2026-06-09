@@ -1,6 +1,6 @@
 # Safety Stress Tests
 
-This file summarizes bounded stress-test claims for PROMETHEUS-H. The executable review artifacts for v0.3.1 are located in \`tests/invariant_tests.py\`, \`tests/replay_harness.py\`, and \`tests/sample.jsonl\`.
+This file summarizes bounded stress-test claims for Trusted Friend. The executable review artifacts for v0.3.1 are located in \`tests/invariant_tests.py\`, \`tests/replay_harness.py\`, and \`tests/sample.jsonl\`.
 
 ## Status Overview
 

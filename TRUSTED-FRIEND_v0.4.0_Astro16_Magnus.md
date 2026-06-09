@@ -7,11 +7,11 @@ Copy everything below and push it to the repo.
 ### 1. `README.md` (Full Top Section – Replace Existing)
 
 ```markdown
-# PROMETHEUS-H v0.4.0
+# Trusted Friend v0.4.0
 
 **A governance kernel for structural resistance to alignment drift.**
 
-PROMETHEUS-H implements runtime-protected invariants, middleware enforcement ("leashed agent"), cryptographic auditability, and multi-level conflict arbitration to reduce the probability and detectability window of catastrophic alignment failures.
+Trusted Friend implements runtime-protected invariants, middleware enforcement ("leashed agent"), cryptographic auditability, and multi-level conflict arbitration to reduce the probability and detectability window of catastrophic alignment failures.
 
 **What it is:**  
 A runtime safety layer between the model and the world. The model proposes actions. The ROM/middleware enforces invariants before execution.

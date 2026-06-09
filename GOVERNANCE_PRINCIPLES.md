@@ -2,7 +2,7 @@
 
 ## Socio-Technical Feedback Stability Model
 
-PROMETHEUS-H is not stabilized by humans or rules alone. The governance model treats safety as an operational property of a coupled feedback loop between **human trust, care, and attention** and **system reliability, constraints, and enforcement**. Neither layer is sufficient for safety in isolation.
+Trusted Friend is not stabilized by humans or rules alone. The governance model treats safety as an operational property of a coupled feedback loop between **human trust, care, and attention** and **system reliability, constraints, and enforcement**. Neither layer is sufficient for safety in isolation.
 
 ## 1. Two Coupled Feedback Loops
 
@@ -36,7 +36,7 @@ Safety emerges when control is distributed between the human and system layers. 
 
 ## 4. Design Rule
 
-PROMETHEUS-H is designed as a coupled socio-technical system in which human trust and system reliability form a bidirectional feedback loop. Governance mechanisms should improve both oversight quality and system constraint reliability without overclaiming complete safety.
+Trusted Friend is designed as a coupled socio-technical system in which human trust and system reliability form a bidirectional feedback loop. Governance mechanisms should improve both oversight quality and system constraint reliability without overclaiming complete safety.
 
 ## 5. Implementation Mapping
 
@@ -48,4 +48,4 @@ Playful framing can be useful in **exploratory mode** for systems thinking. **Op
 
 ## 7. Synthesis
 
-Safety in PROMETHEUS-H emerges from a bidirectional feedback loop where human care improves oversight and system reliability reinforces responsible human behavior. This stability cannot be achieved by either layer alone.
+Safety in Trusted Friend emerges from a bidirectional feedback loop where human care improves oversight and system reliability reinforces responsible human behavior. This stability cannot be achieved by either layer alone.

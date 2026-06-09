@@ -1,6 +1,6 @@
 # Known Limitations v0.4
 
-PROMETHEUS-H does not claim to solve alignment or eliminate all risks.
+Trusted Friend does not claim to solve alignment or eliminate all risks.
 
 ## Threat Model v0.4 [In Scope]
 - Prompt injection & jailbreaks

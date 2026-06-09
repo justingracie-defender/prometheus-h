@@ -43,7 +43,7 @@ Don't wait for governance to catch up. Build the law into the machine.
 
 Join the movement. Audit the code. Wire the switch. 
 
-Repo: https://github.com/justingracie-defender/prometheus-h
+Repo: https://github.com/justingracie-defender/LifeCore-16-Trusted-Friend
 
 To infinity. And beyond, where every kid has a Lake House in their mind. 🦅🔥 (5/5)
 

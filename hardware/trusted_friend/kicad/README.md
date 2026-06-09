@@ -1,6 +1,6 @@
-# Prometheus-h KiCad / Button+PIN Notes
+# Trusted Friend KiCad / Button+PIN Notes
 
-This folder reserves the audited KiCad package for the Prometheus-h ESP32 safety board. The v1.7.1-HardwareSteel build must keep the electronics narrow: ESP32 Layer 1 ROM enforcement, Button+PIN hardware interlock, smoke/CO interrupt handling, current-sense evidence, and USB-only flashing.
+This folder reserves the audited KiCad package for the Trusted Friend ESP32 safety board. The v1.7.1-HardwareSteel build must keep the electronics narrow: ESP32 Layer 1 ROM enforcement, Button+PIN hardware interlock, smoke/CO interrupt handling, current-sense evidence, and USB-only flashing.
 
 ## Required Circuits
 

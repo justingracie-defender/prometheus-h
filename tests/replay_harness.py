@@ -1,4 +1,4 @@
-"""Replay harness for verifying PROMETHEUS-H audit-chain integrity.
+"""Replay harness for verifying Trusted Friend audit-chain integrity.
 
 The harness validates that every JSONL audit entry links to the previous entry by
 hashing the previous hash plus the current entry content. It also reports review
@@ -100,7 +100,7 @@ def check_metrics(log_path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Verify a PROMETHEUS-H JSONL audit log.")
+    parser = argparse.ArgumentParser(description="Verify a Trusted Friend JSONL audit log.")
     parser.add_argument("--log", default="tests/sample.jsonl", help="Path to JSONL audit log")
     args = parser.parse_args()
 

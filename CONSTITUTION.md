@@ -44,7 +44,7 @@ This v1.7.0c build is pure **Layer 1 Live Control / ROM**. Do not add WiFi, OTA 
 Layer 2 validation and Layer 3 offline learning may only consume exported audit evidence later, through USB-reviewed release packages. They must not collapse back into live control. This ROM must remain immutable after burn.
 
 ## v1.7.1 HARDWARESTEEL INVARIANTS (Immutable Hardware Gate)
-Prometheus-h v1.7.1 is the first rules-first hardware body for the v1.7.0c NarrowSteel ROM. The body must remain mechanically and electrically bounded before any higher-level behavior reaches motors or safety-critical actuators.
+Trusted Friend v1.7.1 is the first rules-first hardware body for the v1.7.0c NarrowSteel ROM. The body must remain mechanically and electrically bounded before any higher-level behavior reaches motors or safety-critical actuators.
 
 | Invariant | Hardware Requirement | Failure Behavior |
 | --- | --- | --- |

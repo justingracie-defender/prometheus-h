@@ -1,6 +1,6 @@
 # Magnus Update Package — Copy/Paste
 
-*Subject:* PROMETHEUS-H v0.4.1-emotional-trust — Update + Magnus Test Feedback
+*Subject:* Trusted Friend v0.4.1-emotional-trust — Update + Magnus Test Feedback
 
 Hi Magnus,
 
@@ -14,7 +14,7 @@ Pushing the v0.4.1 update now. This adds the emotional safety layer on top of th
 - `LIMITATIONS.md` — threat model v0.4 updated
 - `CONFLICT_ARBITRATION.md` — Level 4 cross-ref to emotional principles
 
-Full consolidated markdown attached: `PROMETHEUS-H_v0.4.1_EmotionalTrust_Magnus.md`
+Full consolidated markdown attached: `Trusted Friend_v0.4.1_EmotionalTrust_Magnus.md`
 
 *2. Test command:*
 pytest tests/invariant_tests.py tests/emotional_trust_tests.py -v

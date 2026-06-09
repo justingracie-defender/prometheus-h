@@ -1,5 +1,4 @@
-"""PROMETHEUS-H package exports."""
-
+"""Trusted Friend package exports."""
 from .lifecore import (
     AdminNotificationHandler,
     AuditLogger,
@@ -8,7 +7,6 @@ from .lifecore import (
     Vault5,
     bounded_anti_drift_review,
 )
-
 __all__ = [
     "AdminNotificationHandler",
     "AuditLogger",

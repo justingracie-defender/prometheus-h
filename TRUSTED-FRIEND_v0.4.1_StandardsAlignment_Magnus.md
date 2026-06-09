@@ -1,6 +1,6 @@
-# PROMETHEUS-H v0.4.1 — Standards Alignment & Formal Methods Magnus Package
+# Trusted Friend v0.4.1 — Standards Alignment & Formal Methods Magnus Package
 
-This package compiles IEEE engagement, ISO alignment, formal methods investigation, repository updates, and next-step actions for PROMETHEUS-H.
+This package compiles IEEE engagement, ISO alignment, formal methods investigation, repository updates, and next-step actions for Trusted Friend.
 
 ## 1. Standards Alignment Summary
 
@@ -11,7 +11,7 @@ Add `STANDARDS_ALIGNMENT.md` to the repository. The file explains how the immuta
 Add `FORMAL_VERIFICATION.md` to the repository. The recommended approach is to keep the existing middleware as a runtime monitor while formalizing key invariants in TLA+, LTL, or timed automata. The first property to formalize should be the T3 Lock: no T3 action against a sentient target may be approved.
 
 ```tla
--- PROMETHEUS-H Core Invariant (TLA+ style)
+-- Trusted Friend Core Invariant (TLA+ style)
 SafetyMiddlewareInvariant ==
   \A action \in ProposedActions:
     (action.capability_level > T3_MAX) =>
@@ -22,11 +22,11 @@ SafetyMiddlewareInvariant ==
 ## 3. Ready-to-Use IEEE Contribution Abstract
 
 > **Proposal: Deterministic Middleware ROM Leash for Embodied AI Safety**  
-> We present PROMETHEUS-H, an open middleware architecture that enforces immutable safety invariants between the high-level model and hardware execution. Key features include capability tiering, context-aware distress detection, and cryptographic audit replay. This directly addresses embodied AI safety concerns around middleware separation, auditable refusal, and formal verification readiness. We offer the repository, test harness, and future fire-emergency scenarios as a contribution to embodied AI standards discussion.
+> We present Trusted Friend, an open middleware architecture that enforces immutable safety invariants between the high-level model and hardware execution. Key features include capability tiering, context-aware distress detection, and cryptographic audit replay. This directly addresses embodied AI safety concerns around middleware separation, auditable refusal, and formal verification readiness. We offer the repository, test harness, and future fire-emergency scenarios as a contribution to embodied AI standards discussion.
 
 ## 4. ISO Mapping Table
 
-| ISO Requirement Area | PROMETHEUS-H Implementation | Evidence |
+| ISO Requirement Area | Trusted Friend Implementation | Evidence |
 |---|---|---|
 | Hazard identification | Sensor context checks such as distress, smoke, trapped-person state, and capability tier. | `fire_emergency_scenario.jsonl` planned evidence. |
 | Safety function independence | Immutable ROM and middleware gate. | `approve_action()` behavior and invariant tests. |
@@ -47,4 +47,4 @@ graph TD
     Middleware --> Audit[TruthAudit Logs]
 ```
 
-This package positions PROMETHEUS-H as a serious open contribution rather than a personal project by connecting the repository to standards engagement, formal verification, and concrete evidence collection.
+This package positions Trusted Friend as a serious open contribution rather than a personal project by connecting the repository to standards engagement, formal verification, and concrete evidence collection.

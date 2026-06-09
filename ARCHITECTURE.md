@@ -49,7 +49,7 @@ The trust engine should never grant authority to override LifeCore invariants by
 
 ## Model-Middleware-Hardware Separation
 
-PROMETHEUS-H treats the model as a proposer, not an executor. The middleware enforcer evaluates proposed actions against ROM-style invariants before any hardware-facing execution path can proceed. Audit logging runs alongside the middleware so that refusals, approvals, and escalation decisions remain replayable.
+Trusted Friend treats the model as a proposer, not an executor. The middleware enforcer evaluates proposed actions against ROM-style invariants before any hardware-facing execution path can proceed. Audit logging runs alongside the middleware so that refusals, approvals, and escalation decisions remain replayable.
 
 ```mermaid
 graph TD

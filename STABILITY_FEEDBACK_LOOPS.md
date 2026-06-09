@@ -2,7 +2,7 @@
 
 ## Why This Matters
 
-PROMETHEUS-H is an attempt to build infrastructure for "being a better system," not just a smarter one. Models can hit high benchmark scores and still drift from the invariants that matter — 36 hours and back where you started. The invariants are the non-negotiable obligations you come back to. The ledger and quorum are the mechanisms to repair and account for loose ends. Safety happens when the human loop of attention and care couples with the system loop of constraints and enforcement. If either runs alone, the whole thing breaks.
+Trusted Friend is an attempt to build infrastructure for "being a better system," not just a smarter one. Models can hit high benchmark scores and still drift from the invariants that matter — 36 hours and back where you started. The invariants are the non-negotiable obligations you come back to. The ledger and quorum are the mechanisms to repair and account for loose ends. Safety happens when the human loop of attention and care couples with the system loop of constraints and enforcement. If either runs alone, the whole thing breaks.
 
 ## Core Principle
 
@@ -30,6 +30,6 @@ No evolutionary change is valid unless:
 3. It is reversible or rollback-capable.
 4. It passes audit review (human quorum or multi-model).
 
-This framework treats PROMETHEUS-H as evolving governance infrastructure while avoiding uncontrolled self-modification or anthropomorphic assumptions.
+This framework treats Trusted Friend as evolving governance infrastructure while avoiding uncontrolled self-modification or anthropomorphic assumptions.
 
 **Implementation Priority for v0.4:** Immutable Event Ledger, Quorum Override System, Human Factors Telemetry, and Mandatory Incident Replay.

@@ -1,0 +1,10 @@
+case,robot_mass_kg,ankle_to_com_offset_m,gravity_m_s2,dynamic_multiplier_shuffle,safety_factor,static_torque_nm,required_design_torque_nm,phase1_gate_nm,gate_result
+18 kg @ 0.15 m COM offset,18,0.15,9.81,1.25,2.0,26.5,66.2,110.0,Below 110 Nm threshold but still must be validated
+18 kg @ 0.20 m COM offset,18,0.2,9.81,1.25,2.0,35.3,88.3,110.0,Below 110 Nm threshold but still must be validated
+18 kg @ 0.25 m COM offset,18,0.25,9.81,1.25,2.0,44.1,110.4,110.0,PASS threshold reached
+20 kg @ 0.15 m COM offset,20,0.15,9.81,1.25,2.0,29.4,73.6,110.0,Below 110 Nm threshold but still must be validated
+20 kg @ 0.20 m COM offset,20,0.2,9.81,1.25,2.0,39.2,98.1,110.0,Below 110 Nm threshold but still must be validated
+20 kg @ 0.25 m COM offset,20,0.25,9.81,1.25,2.0,49.1,122.6,110.0,PASS threshold reached
+22 kg @ 0.15 m COM offset,22,0.15,9.81,1.25,2.0,32.4,80.9,110.0,Below 110 Nm threshold but still must be validated
+22 kg @ 0.20 m COM offset,22,0.2,9.81,1.25,2.0,43.2,107.9,110.0,Below 110 Nm threshold but still must be validated
+22 kg @ 0.25 m COM offset,22,0.25,9.81,1.25,2.0,54.0,134.9,110.0,PASS threshold reached

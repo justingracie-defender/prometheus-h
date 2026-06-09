@@ -36,9 +36,15 @@ A joint cannot pass the v1.8 gate unless its actuator, transmission, bracket, fa
 | Shoulder pitch | TBD | TBD | TBD | ≥ 2.0 | TBD | TBD | Hold |
 | Elbow pitch | TBD | TBD | TBD | ≥ 2.0 | TBD | TBD | Hold |
 | Wrist | TBD | TBD | TBD | ≥ 2.0 | TBD | TBD | Hold |
-| Hip pitch | TBD | TBD | TBD | ≥ 2.0 | TBD | TBD | Hold |
-| Knee pitch | TBD | TBD | TBD | ≥ 2.0 | TBD | TBD | Hold |
-| Ankle pitch | TBD | TBD | TBD | ≥ 2.0 | TBD | TBD | Hold |
+| Hip pitch | TBD | TBD | TBD | ≥ 2.0 | TBD | TBD | Hold — no hip printing before ankle Phase 1 passes |
+| Knee pitch | TBD | TBD | TBD | ≥ 2.0 | TBD | TBD | Hold — no knee printing before ankle Phase 1 passes |
+| Ankle pitch | 18–22 kg robot-level first-pass cases | 0.15–0.25 m | 1.25 shuffle-gait starter | ≥ 2.0 | 66.2–134.9 N·m | CubeMars AKH70-48 preferred; AK80-64 fallback; H54+3:1 alternative | Phase 1 hold |
+
+## Phase 1 Ankle Update
+
+The ankle now has a dedicated Phase 1 gate in `vnv_ankle_phase1.md`. The generated calculation artifacts are `ankle_torque_phase1.csv` and `ankle_torque_phase1.xlsx`. These files model an 18–22 kg robot with a conservative shuffle-gait dynamic multiplier of 1.25 and a minimum safety factor of 2.0.
+
+The current Phase 1 recommendation is to design the first ankle CAD envelope around the CubeMars AKH70-48 V1.0 KV41, keep CubeMars AK80-64 KV80 as the lighter fallback, and keep ROBOTIS H54-200-S500-R plus external 3:1 reduction as the ROBOTIS-family alternative. ROBOTIS MX-64 and XM430-class actuators are not acceptable as primary ankle actuators for this five-foot biped without a separately validated transmission.
 
 ## Scaling Warning
 

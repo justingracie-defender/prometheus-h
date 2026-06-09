@@ -63,6 +63,10 @@ The hand subsystem is deliberately weaker than the arm structure. It is designed
 | `docs/VnV_plan_v18.md` | Verification and validation starter plan for v1.8. |
 | `software/pypot_safety_wrapper.py` | Raspberry Pi command wrapper that forwards only bounded commands to ESP32 enforcement. |
 | `hardware/trusted_friend_biped_poppy/docs/torque_calculation_starter.md` | Torque calculation starter for scaled Poppy-inspired joints. |
+| `hardware/trusted_friend_biped_poppy/docs/vnv_ankle_phase1.md` | Phase 1 ankle actuator, torque, CAD, and fixture V&V gate. |
+| `hardware/trusted_friend_biped_poppy/docs/ankle_actuator_shortlist.md` | Datasheet-backed ankle actuator shortlist and procurement gate. |
+| `hardware/trusted_friend_biped_poppy/docs/ankle_torque_phase1.xlsx` | Spreadsheet for 18–22 kg shuffle-gait ankle torque cases. |
+| `hardware/trusted_friend_biped_poppy/cad/ankle_phase1/` | CAD-ready ankle envelope planning package; not fabrication approval. |
 | `hardware/trusted_friend_biped_poppy/docs/assembly_guide.md` | Assembly sequence and power-on hold points. |
 | `hardware/trusted_friend_biped_poppy/BOM_trusted_friend_biped_poppy.csv` | Starter bill of materials and audit placeholders. |
 | `software/safety_firewall_v18.py` | Layer 2 evidence firewall harness proving v1.8 command rejection and limp-shutdown routing. |
@@ -75,6 +79,7 @@ No build stage may advance merely because parts are available. Each step must ha
 
 | Hold Point | Required Evidence | Decision Rule |
 | --- | --- | --- |
+| Ankle Phase 1 | Datasheet-backed actuator shortlist, 18–22 kg torque spreadsheet, ankle CAD envelope, and V&V checklist. | Do not print knee or hip parts until ankle Phase 1 passes and is witnessed. |
 | CAD freeze | Mass, center of gravity, joint loads, fall envelope, and pinch-zone review. | Do not print if torque safety factor is below 2.0. |
 | Bench wiring | ESP32 boot hash, E-stop, Button+PIN, current limit, and sensor fault tests. | Do not attach actuators if Layer 1 enforcement is not proven. |
 | Unloaded motion | Joint range, speed cap, torque cap, and limp mode tests. | Do not install limbs if any actuator ignores a safety command. |

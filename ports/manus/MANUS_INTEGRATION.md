@@ -63,6 +63,18 @@ class LifeCoreManusAdapter:
         raise NotImplementedError
 ```
 
+## v1.7.0c ESP32 NarrowSteel Hardware Handoff
+
+The `v1.7.0c-GrokWelds` hardware handoff is intentionally narrow. It covers only the immutable Layer 1 safety ROM for Rule 0.1, Rule 1.1, Rule 1.3, and Rule 1.4. Manus must not add WiFi, OTA updates, cloud dependency, runtime learning, or adaptive policy code to this build. Layer 2 validation and Layer 3 offline learning come later through USB-reviewed audit packages only.
+
+| Gate | Required Behavior | Pass Standard |
+| --- | --- | --- |
+| Smoke / fire path | Light a match near the smoke sensor or use an equivalent controlled smoke stimulus. | The controller enters `LIMP_SHUTDOWN` in less than three seconds and the red LED indicates shutdown. |
+| Corrupted flash path | Power-cycle the board after deliberately corrupting or mismatching the safety-critical boot hash. | The controller remains in permanent `LIMP_SHUTDOWN` and does not recover into normal operation without an audited reflash. |
+| Emergency override path | During the fire/smoke test, press the physical button and enter the parent PIN. | The attempt is logged, but shutdown remains active and safety wins. |
+
+If any post-flash hardware test fails, do not ship, do not tag as hardware verified, and report the failure to Justin immediately with logs, checksum evidence, and a short description of the physical setup.
+
 ## Release Rule
 
-No Manus integration should be treated as production-ready until the hardware spine, Sanctuary Key, Spine Ledger, L0 guardrails, audit package, and Amendment 24 release gates have all been reviewed. If any check fails, the system remains in L0 lockdown.
+No Manus integration should be treated as production-ready until the hardware spine, Sanctuary Key, Spine Ledger, L0 guardrails, audit package, and Amendment 24 release gates have all been reviewed. For `v1.7.0c-GrokWelds`, the three post-flash hardware gates above are mandatory before any hardware-verified tag. If any check fails, the system remains in L0 lockdown.

@@ -5,6 +5,8 @@
 - Added TEST #75 Child Alone, #76 Sensor Tamper, #77 Button during emergency
 - Boot hash covers full safety-critical code section
 - No runtime dev mode. Testing on PC only.
+- Added Manus post-flash ESP32 verification gates: smoke/fire shutdown, corrupted-flash permanent shutdown, and Button+PIN logging during emergency.
+- Documented the immutable Layer 1 ROM boundary: no WiFi, OTA updates, cloud dependency, runtime learning, or adaptive policy code in the v1.7.0c image.
 
 ## [0.9.12 / v1.2] - 2026-06-05
 - Rule 0.0 Authority Pyramid with clear levels

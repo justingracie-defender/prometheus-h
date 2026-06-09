@@ -20,6 +20,8 @@ LifeCore-16 is deliberately **limited and trustworthy** so families can actually
 Never harm humans. Never obey harm orders. Never resist shutdown.  
 **Never self-update safety rules.** Rule 0 is burned in. No ML, no learning on safety.
 
+**v1.7.0c NarrowSteel boundary:** the first ESP32 image is pure Layer 1 Live Control / ROM. No WiFi, OTA updates, cloud dependency, runtime learning, or adaptive policy code belongs in this hardware build.
+
 Full Constitution: [`CONSTITUTION.md`](CONSTITUTION.md)
 
 ### Key Features

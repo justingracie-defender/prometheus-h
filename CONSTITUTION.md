@@ -38,6 +38,11 @@ On every boot: SHA256 of full safety-critical code section (Rule 0.1 + Button+PI
 ## RULE 1.4: NO RUNTIME DEV MODE (Immutable)
 No dev mode exists at runtime. Safety is immutable while running. Testing on PC only.
 
+## v1.7.0c LAYER 1 ROM BOUNDARY (Immutable)
+This v1.7.0c build is pure **Layer 1 Live Control / ROM**. Do not add WiFi, OTA update logic, cloud dependency, runtime learning, or adaptive policy code to this image.
+
+Layer 2 validation and Layer 3 offline learning may only consume exported audit evidence later, through USB-reviewed release packages. They must not collapse back into live control. This ROM must remain immutable after burn.
+
 ### SHUTDOWN v1.1
 4 ways always work: Physical button, Voice "SHUT DOWN NOW", Admin app, Auto-fire/thermal
 60s Override during active shield: Hold button 5s + "OVERRIDE CONFIRMED" voice + fingerprint scan

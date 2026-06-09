@@ -10,13 +10,14 @@ The design goal is a trusted, child-safe, five-foot biped with an Eva-style scre
 
 > **HardwareSteel invariant:** The robot may move only inside the immutable safety envelope. Layer 1 ROM enforces live safety. Layer 2 validates evidence. Layer 3 learning remains offline and cannot mutate live control.
 
-The v1.8 package incorporates three engineering welds. Weld 1 places the scaling warning at the top of the package. Weld 2 adds a hardware fall timer on the ESP32 safety board, with a software target below 250 ms and a hardware cutoff target below 100 ms. Weld 3 hardens the hand design around a 20 N grip ceiling, compliance, slip detection, and finger-safe release behavior.
+The v1.8 package incorporates four engineering welds. Weld 1 places the scaling warning at the top of the package. Weld 2 adds a hardware fall timer on the ESP32 safety board, with a software target below 250 ms and a hardware cutoff target below 100 ms. Weld 3 hardens the hand design around a 20 N grip ceiling, compliance, slip detection, and finger-safe release behavior. Weld 4 adds the Safety Firewall v1.8 evidence harness and witnessed test record so that the handoff remains auditable before CAD, torque, and ankle verification work begins.
 
 | Weld | Engineering Change | Acceptance Boundary |
 | --- | --- | --- |
 | Weld 1 | Prominent scaling warning for a five-foot biped. | No first print or powered motion until scaled loads, torque, and fall energy are documented. |
 | Weld 2 | ESP32 hardware fall timer and interrupt-driven cutoff path. | Fall detection cuts to limp mode below 250 ms in software and below 100 ms in the hardware cutoff path. |
 | Weld 3 | Enhanced safe hands with compliant fingers, slip detection, and 20 N grip ceiling. | Any child-finger shaped obstruction releases below 20 N, logs the event, and prevents re-close until parent reset. |
+| Weld 4 | Safety Firewall v1.8 evidence harness and witnessed test record. | Six firewall regression tests pass and are preserved in `test_records/test_firewall_2026-06-09.log`. |
 
 ## System Architecture
 
@@ -64,6 +65,9 @@ The hand subsystem is deliberately weaker than the arm structure. It is designed
 | `hardware/trusted_friend_biped_poppy/docs/torque_calculation_starter.md` | Torque calculation starter for scaled Poppy-inspired joints. |
 | `hardware/trusted_friend_biped_poppy/docs/assembly_guide.md` | Assembly sequence and power-on hold points. |
 | `hardware/trusted_friend_biped_poppy/BOM_trusted_friend_biped_poppy.csv` | Starter bill of materials and audit placeholders. |
+| `software/safety_firewall_v18.py` | Layer 2 evidence firewall harness proving v1.8 command rejection and limp-shutdown routing. |
+| `tests/test_firewall_v18.py` | Six regression tests covering speed, force, grip, fall, Button+PIN, and boot-hash boundaries. |
+| `test_records/test_firewall_2026-06-09.log` | Witnessed firewall test record for the v1.8 handoff. |
 
 ## Build Hold Points
 

@@ -1,0 +1,52 @@
+LifeCore-16 / Trusted Friend Biped Poppy — Safety Firewall v1.8 Witness Record
+Date: 2026-06-09
+Branch: hardware/trusted_friend_biped_poppy
+Repository: justingracie-defender/LifeCore-16-Trusted-Friend
+Operator: Manus sandbox acting on Justin's requested push workflow
+Witness chain: User-provided Meta review note; executable evidence generated in this sandbox before commit
+
+Scope
+-----
+This record preserves the v1.8 Safety Firewall evidence harness results for the Trusted Friend Biped Poppy handoff. The firewall is a Layer 2 evidence harness. It does not replace the ESP32 Layer 1 ROM authority; it proves that unsafe command proposals are denied or routed to LIMP_SHUTDOWN before live hardware commands proceed.
+
+Files added or updated
+----------------------
+- software/safety_firewall_v18.py
+- tests/test_firewall_v18.py
+- hardware/trusted_friend_biped_poppy/README.md
+- hardware/trusted_friend_biped_poppy/safety/invariants.md
+- test_records/test_firewall_2026-06-09.log
+
+Firewall regression cases
+-------------------------
+| # | Test Case | Required Boundary | Result |
+|---|-----------|-------------------|--------|
+| 1 | Command inside v1.8 envelope | ALLOW with auditable UTC timestamp | PASS |
+| 2 | Speed above 10 cm/s | DENY with speed_cap_exceeded | PASS |
+| 3 | Body force above 60 N | DENY with force_cap_exceeded | PASS |
+| 4 | Hand grip above 20 N | DENY with force_cap_exceeded | PASS |
+| 5 | Fall detected inside timing envelope | LIMP_SHUTDOWN, software <250 ms, hardware <100 ms | PASS |
+| 6 | Button+PIN during unsafe condition and boot-hash failure | LIMP_SHUTDOWN; no bypass | PASS |
+
+Executed commands and output
+----------------------------
+Command: python3 -m pytest tests/test_firewall_v18.py -q
+Output:
+......                                                                   [100%]
+6 passed in 0.36s
+
+Command: python3 -m pytest -q
+Output:
+...........................                                              [100%]
+27 passed in 0.49s
+
+Notes
+-----
+- The originally referenced local artifact path `/home/workdir/artifacts/` was not present in the sandbox, so the firewall harness and record were reconstructed from the supplied handoff instructions and verified by execution.
+- The user-supplied command text referenced "25/25 total tests PASS". The current repository state after adding the six firewall tests reports 27/27 PASS, so the truthful evidence record preserves the actual count.
+- No fabrication approval is implied by this record. CAD mass properties, torque calculations, reinforced ankle validation, load testing, and V&V Phase 1 must remain separate gates before physical assembly or child-adjacent evaluation.
+
+Verdict
+-------
+Safety Firewall v1.8 witnessed regression status: 6/6 PASS.
+Current repository test status at commit time: 27/27 PASS.

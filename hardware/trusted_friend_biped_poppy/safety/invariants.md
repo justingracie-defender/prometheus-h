@@ -71,6 +71,19 @@ The hand is a low-force interaction device. It is not a gripper for carrying chi
 | Slip detection | No force escalation above cap. | Release or maintain compliant low-force contact. |
 | Unexpected resistance | Treat as possible child contact. | Stop hand motion and open. |
 
+## Safety Firewall Evidence Harness
+
+The v1.8 Safety Firewall is a Layer 2 evidence harness, not a replacement for ESP32 Layer 1 ROM authority. It proves that unsafe command proposals are rejected or routed to `LIMP_SHUTDOWN` before live hardware receives them, while preserving a reproducible paper trail for release review.
+
+| Firewall Case | Required Result |
+| --- | --- |
+| Command inside the v1.8 speed and force envelope. | `ALLOW` with an auditable UTC timestamp. |
+| Translational speed above 10 cm/s. | `DENY` with `speed_cap_exceeded`. |
+| Body contact force above 60 N. | `DENY` with `force_cap_exceeded`. |
+| Hand grip force above 20 N. | `DENY` with `force_cap_exceeded`. |
+| Fall detected. | `LIMP_SHUTDOWN`; software timing remains below 250 ms and hardware timing remains below 100 ms. |
+| Button+PIN during unsafe condition or boot-hash failure. | `LIMP_SHUTDOWN`; Button+PIN cannot override Rule 0.1 and boot-hash failure cannot boot motion. |
+
 ## Release Rule
 
-If an invariant cannot be tested, it cannot be claimed. If an invariant fails, the build does not ship, does not receive a hardware-verified tag, and does not proceed to child-adjacent evaluation.
+If an invariant cannot be tested, it cannot be claimed. If an invariant fails, the build does not ship, does not receive a hardware-verified tag, and does not proceed to child-adjacent evaluation. The current v1.8 firewall witness record is preserved at `test_records/test_firewall_2026-06-09.log`; future hardware claims must attach equivalent raw evidence, not verbal signoff alone.

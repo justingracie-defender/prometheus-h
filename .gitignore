@@ -6,6 +6,8 @@ env/
 .idea/
 .vscode/
 *.log
+!test_records/
+!test_records/*.log
 /ledger/
 keys/
 *.key

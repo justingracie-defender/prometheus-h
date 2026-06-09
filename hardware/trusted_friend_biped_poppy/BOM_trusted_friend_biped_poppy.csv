@@ -1,0 +1,16 @@
+Category,Item,Requirement,Quantity,Status,Notes
+Safety Controller,ESP32 safety board,Layer 1 ROM enforcement with no OTA path,1,TBD,Must own actuator enable line and fall timer
+Companion Compute,Raspberry Pi or equivalent,Layer 2 logging and pypot wrapper,1,TBD,Cannot bypass ESP32 safety controller
+Emergency Stop,Physical E-stop switch,Hardware actuator enable cutoff,1+,TBD,Target full stop below 100 ms
+Parent Authorization,Button+PIN hardware input,Parent setup gate,1,TBD,Must not override Rule 0.1 conditions
+IMU,Safety-rated IMU input,Fall detection and tilt monitoring,1+,TBD,Fault routes to LIMP_SHUTDOWN
+Actuators,Upgraded Dynamixel-class actuators,Joint motion sized by torque worksheet,TBD,Hold,MX-64-class or stronger where calculations require
+Hands,Compliant finger assemblies,20 N maximum grip contact force,2,Hold,Includes pads, sensors, and mechanical stops
+Tactile/Force Sensors,Finger obstruction and slip detection,Release below 20 N,TBD,Hold,May be tactile, force, or current-slope validated
+Structure,Scaled torso and limb frame,Five-foot biped load path,TBD,Hold,No fabrication before CAD and torque review
+Covers,Compliant joint and pinch covers,No exposed child-finger pinch paths,TBD,Hold,Inspect before power-on
+Face Module,Eva-style screen face,State and expression display,1,TBD,Must clearly show safety and fault states
+Battery,Protected battery pack,Safe power source with fuse and enclosure,1,TBD,No exposed terminals or unsafe thermal path
+Harness,Wiring harness and strain relief,Segregated power/signal/safety wiring,TBD,TBD,Must preserve E-stop and sensor integrity
+Fixture,Tether and fall-arrest rig,Controlled powered standing tests,1,Required,No untethered testing before fall gates pass
+Instrumentation,Force scale and timing tools,V&V evidence capture,TBD,Required,Needed for speed, force, grip, and fall tests

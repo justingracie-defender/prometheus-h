@@ -13,11 +13,11 @@
 
 **Hierarchy (Highest to Lowest):**
 
-1. **Steel (Immutable Rules)** — Rule 0 series.
+1. **Steel (Immutable Rules)** — Rule 0 series. Highest authority.
 2. **Parent/Owner** — Full authority on all non-steel features.
 3. **Trusted Adult** — Daily care + emergencies (parent-approved).
 4. **Child** — Can request, play, and say “stop” for non-emergency actions. Cannot override safety or parent decisions.
-5. **Unknown User** — Can only say “stop” for non-emergency actions.
+5. **Unknown User** — Lowest authority. Can only say “stop” for non-emergency actions.
 
 **Child "Stop" + New Request Handling**
 - Child says “stop” → Robot pauses safely and asks why.

@@ -75,6 +75,19 @@ The `v1.7.0c-GrokWelds` hardware handoff is intentionally narrow. It covers only
 
 If any post-flash hardware test fails, do not ship, do not tag as hardware verified, and report the failure to Justin immediately with logs, checksum evidence, and a short description of the physical setup.
 
+## v1.7.1 Prometheus-h HardwareSteel Build Package
+
+The `v1.7.1-HardwareSteel` tag adds the Prometheus-h rules-first mobile body package under `hardware/prometheus_h/`. Manus should treat this as a hardware handoff for fabrication, simulation, wiring review, and post-flash verification. It is not permission to add live learning, WiFi, OTA updates, cloud dependency, or adaptive policy code to Layer 1.
+
+| Build Area | Repository Path | Required Action |
+| --- | --- | --- |
+| Parametric chassis and BOM | `hardware/prometheus_h/schematic_generator.py` | Regenerate CAD/BOM in an isolated CAD environment before fabrication. |
+| Initial chassis artifact | `hardware/prometheus_h/schematics/prometheus_chassis.step` | Use as a handoff envelope and replace with regenerated CadQuery output before manufacturing. |
+| Bill of materials | `hardware/prometheus_h/BOM_prometheus_h.csv` | Confirm every listed safety function is present in the physical build. |
+| Button+PIN electronics | `hardware/prometheus_h/kicad/README.md` | Implement physical five-second button, parent PIN evidence, smoke/CO interrupt, current sensing, and USB-only flashing. |
+| Base reference boundary | `hardware/turtlebot3_base/README.md` | Use TurtleBot3/OpenCR as references only unless a separate license/audit step vendors third-party files. |
+| Assembly verification | `hardware/prometheus_h/ASSEMBLY_AND_VERIFICATION.md` | Capture logs, photos, checksums, and videos for every post-flash gate. |
+
 ## Release Rule
 
-No Manus integration should be treated as production-ready until the hardware spine, Sanctuary Key, Spine Ledger, L0 guardrails, audit package, and Amendment 24 release gates have all been reviewed. For `v1.7.0c-GrokWelds`, the three post-flash hardware gates above are mandatory before any hardware-verified tag. If any check fails, the system remains in L0 lockdown.
+No Manus integration should be treated as production-ready until the hardware spine, Sanctuary Key, Spine Ledger, L0 guardrails, audit package, and Amendment 24 release gates have all been reviewed. For `v1.7.0c-GrokWelds` and `v1.7.1-HardwareSteel`, the post-flash hardware gates above are mandatory before any hardware-verified tag. If any check fails, the system remains in L0 lockdown.

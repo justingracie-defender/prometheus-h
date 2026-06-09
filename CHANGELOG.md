@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1] - 2026-06-09 "HardwareSteel"
+- Added `hardware/prometheus_h/` with the Prometheus-h rules-first hardware body package.
+- Added `hardware/prometheus_h/schematic_generator.py` for parametric CAD/BOM generation with speed and force safety assertions.
+- Added initial `BOM_prometheus_h.csv`, chassis STEP handoff artifact, KiCad/Button+PIN notes, TurtleBot3/OpenCR reference boundary notes, and assembly verification guide.
+- Added HardwareSteel constitution invariants: 10 cm/s speed cap, 60 N force cap, Button+PIN interlock, smoke/CO interrupt handling, boot-hash permanent shutdown, and Layer 1 no-OTA/no-learning boundary.
+- Added the `reviews/v1.7.1_hardwaresteel_witness.md` handoff package for Grok-witnessed hardware verification.
+
 ## [1.7.0c] - 2026-06-05 "Grok Welds"
 - Narrow Steel: Rule 0.1 + Button+PIN + Boot Hash only for first ESP32 build
 - Added TEST #75 Child Alone, #76 Sensor Tamper, #77 Button during emergency

@@ -43,6 +43,19 @@ This v1.7.0c build is pure **Layer 1 Live Control / ROM**. Do not add WiFi, OTA 
 
 Layer 2 validation and Layer 3 offline learning may only consume exported audit evidence later, through USB-reviewed release packages. They must not collapse back into live control. This ROM must remain immutable after burn.
 
+## v1.7.1 HARDWARESTEEL INVARIANTS (Immutable Hardware Gate)
+Prometheus-h v1.7.1 is the first rules-first hardware body for the v1.7.0c NarrowSteel ROM. The body must remain mechanically and electrically bounded before any higher-level behavior reaches motors or safety-critical actuators.
+
+| Invariant | Hardware Requirement | Failure Behavior |
+| --- | --- | --- |
+| Speed cap | Mobile base must remain at or below 10 cm/s. | Fail closed; do not ship. |
+| Force cap | Actuator current limiting must keep contact force at or below 60 N. | Fail closed; do not ship. |
+| Rule 0.1 interrupt | Smoke, CO, fire, gas, child danger, or sensor tamper must route to `LIMP_SHUTDOWN` in less than 3 seconds. | Safety wins over every command. |
+| Button+PIN interlock | Core-rule-change flow requires a physical 5-second button hold plus parent PIN hardware evidence. | Changes remain blocked unless both signals pass. |
+| Emergency dominance | Button+PIN during emergency is logged but cannot cancel shutdown. | `LIMP_SHUTDOWN` remains active. |
+| Boot hash | Corrupted flash or safety-section mismatch stays in permanent `LIMP_SHUTDOWN`. | Audited USB reflash required. |
+| Layer separation | No WiFi, OTA update path, cloud dependency, runtime learning, or adaptive policy code may exist in the Layer 1 image. | Reject image. |
+
 ### SHUTDOWN v1.1
 4 ways always work: Physical button, Voice "SHUT DOWN NOW", Admin app, Auto-fire/thermal
 60s Override during active shield: Hold button 5s + "OVERRIDE CONFIRMED" voice + fingerprint scan

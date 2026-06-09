@@ -1,0 +1,12 @@
+Item,Part,Qty,Notes/Safety
+1,ESP32 DevKit or custom ESP32 safety board,1,v1.7.0c ROM image; Button+PIN interlock; USB flash only
+2,"Wheels, TurtleBot3-style",2,100 mm diameter; speed-capped to 0.1 m/s; max motor RPM 19.1
+3,ODrive/SimpleFOC or Dynamixel-style motor driver,1,Current limit configured so contact force remains at or below 60 N
+4,RPLIDAR A1 or equivalent,1,Navigation and obstacle awareness; tamper/fault state routes to shutdown
+5,Smoke/CO sensor,1,Interrupt line for Rule 0.1; LIMP_SHUTDOWN under 3 seconds
+6,IMU,1,Odometry and speed validation evidence
+7,Battery plus BMS,1,Home operating-design-domain power source with protected charging
+8,Physical safety button,1,Five-second hold input for Button+PIN gate
+9,ADC resistor ladder / PIN interface,1,Parent PIN hardware interlock evidence
+10,INA219 or equivalent current sensor,1,Force/torque enforcement evidence through current sensing
+11,Low-profile chassis shell,1,"Rounded bumpers, low center of mass, no pinch-point deployment"
